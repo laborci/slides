@@ -103,6 +103,7 @@ No Chrome or Node available (e.g. a sandbox without a browser)? Say so. Keep the
     - the first line of the mermaid block is `%%{init: {"themeVariables": {"fontSize": "14px", "cScale0": "<accent-900 hex>", "cScaleLabel0": "#ffffff", …}}}%%`, with the same pair repeated for cScale1–3.
 - **Video (`@youtube`):**
   - Headless /render shows an empty frame, and it does not flag a video that runs off the slide, so check the PNG.
-  - House style: one video per slide, no text, `<!-- @cover -->` then `<!-- @youtube -->` and the link. The video fills the whole slide. Before it, a title slide with only `# <Name> in 100 seconds`, centred between two `@space` directives.
+  - House style: one video per slide, no text, `<!-- @cover -->` then `<!-- @youtube -->` and the link. The video fills the whole slide. Before it, a title slide with only `# <Name> in 100 seconds`, centred between two `@space` directives. For a video that isn't from the 100-seconds series, the title slide shows the video's own title.
+  - A vertical YouTube Short goes in the middle third of the slide: `<!-- @layout .A. collapse -->`, then `@cover` and `@youtube` as above. To tell whether a video is a Short, check its page for `"isShortsEligible":true`.
 - **Callouts:** a callout below a table or code is the usual cause of "crowded" warnings. Move the extra sentence into the note first.
 - **Order of fixes for a crowded slide:** move text to the note, then split the slide, then reduce scale. Don't go below about 65%.
