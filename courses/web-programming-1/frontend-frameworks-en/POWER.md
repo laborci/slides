@@ -256,6 +256,23 @@ export function Counter() {
 
 ---
 
+<!-- @slide React video -->
+<!-- @slide-theme slate cyan sky -->
+
+<!-- @color cyan -->
+## Fireship · video
+
+# React in 100 seconds
+
+<!-- @width 64% -->
+<!-- @youtube -->
+[React in 100 seconds](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
+
+<!-- @note -->
+> Fireship's short summary of React (about 2 minutes). A good recap of JSX, components and hooks; if time is short, recommend it for watching at home.
+
+---
+
 <!-- @slide Angular history -->
 <!-- @slide-theme slate red rose -->
 <!-- @layout AAAA/BCDE/BCDE -->
@@ -347,6 +364,23 @@ export class Counter {
 
 ---
 
+<!-- @slide Angular video -->
+<!-- @slide-theme slate red rose -->
+
+<!-- @color red -->
+## Fireship · video
+
+# Angular in 100 seconds
+
+<!-- @width 64% -->
+<!-- @youtube -->
+[Angular in 100 seconds](https://www.youtube.com/watch?v=Ata9cSC2WpM)
+
+<!-- @note -->
+> Fireship's summary of Angular: components, decorators, dependency injection, the CLI. The video is older and shows Angular before standalone components and signals.
+
+---
+
 <!-- @slide Vue history -->
 <!-- @slide-theme slate emerald green -->
 <!-- @layout AAAA/BCDE/BCDE -->
@@ -434,6 +468,33 @@ const count = ref(0);
 
 ---
 
+<!-- @slide Vue video -->
+<!-- @slide-theme slate emerald green -->
+<!-- @grid AB -->
+
+<!-- @color emerald -->
+## Fireship · video
+
+# Vue in 100 seconds
+
+<!-- @youtube -->
+[Vue in 100 seconds](https://www.youtube.com/watch?v=nhBVL41-_Cw)
+
+***
+
+<!-- @color emerald -->
+## Fireship · video
+
+# Nuxt in 100 seconds
+
+<!-- @youtube -->
+[Nuxt in 100 seconds](https://www.youtube.com/watch?v=dCxSsr5xuL8)
+
+<!-- @note -->
+> Two short videos: Vue itself on the left, Nuxt on the right, the meta-framework built on Vue (routing, SSR, SSG). Nuxt is to Vue what Next.js is to React.
+
+---
+
 <!-- @slide Svelte history -->
 <!-- @slide-theme stone orange orange -->
 <!-- @layout AAAA/BCDE/BCDE -->
@@ -515,6 +576,23 @@ Rich Harris (The Guardian) — “the disappearing framework”
 
 <!-- @note -->
 > Svelte is a compiler: at build time it generates targeted DOM instructions, so it needs neither a Virtual DOM nor a large runtime. Svelte 5 runes (`$state`, `$derived`, `$effect`) made reactivity explicit, so it also works outside components. It has topped developer satisfaction surveys for years.
+
+---
+
+<!-- @slide Svelte video -->
+<!-- @slide-theme stone orange orange -->
+
+<!-- @color orange -->
+## Fireship · video
+
+# SvelteKit in 100 seconds
+
+<!-- @width 64% -->
+<!-- @youtube -->
+[SvelteKit in 100 seconds](https://www.youtube.com/watch?v=H1eEFfAkIik)
+
+<!-- @note -->
+> SvelteKit is Svelte's official meta-framework: file-based routing, SSR, SSG, server-side load functions. The video also briefly covers Svelte basics.
 
 ---
 
@@ -601,6 +679,23 @@ const posts = await getCollection("blog");
 
 <!-- @note -->
 > The frontmatter (between the `---` lines) runs on the server or at build time; only HTML reaches the client. The `Counter` component is an “island”: thanks to `client:visible` it only downloads JavaScript when the user scrolls to it. Other options: `client:load`, `client:idle`. A single page can even contain React and Svelte components side by side.
+
+---
+
+<!-- @slide Astro video -->
+<!-- @slide-theme zinc violet fuchsia -->
+
+<!-- @color violet -->
+## Fireship · video
+
+# Astro in 100 seconds
+
+<!-- @width 64% -->
+<!-- @youtube -->
+[Astro in 100 seconds](https://www.youtube.com/watch?v=dsTXcSeAZq8)
+
+<!-- @note -->
+> Fireship's summary of Astro: islands architecture, content-focused sites, several UI frameworks in one project.
 
 ---
 

@@ -256,6 +256,23 @@ export function Counter() {
 
 ---
 
+<!-- @slide React videó -->
+<!-- @slide-theme slate cyan sky -->
+
+<!-- @color cyan -->
+## Fireship · videó
+
+# React 100 másodpercben
+
+<!-- @width 64% -->
+<!-- @youtube -->
+[React 100 másodpercben](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
+
+<!-- @note -->
+> Fireship rövid összefoglalója a Reactről (kb. 2 perc). Jó ismétlés a JSX-ről, a komponensekről és a hookokról; ha kevés az idő, otthoni nézésre ajánlható.
+
+---
+
 <!-- @slide Angular története -->
 <!-- @slide-theme slate red rose -->
 <!-- @layout AAAA/BCDE/BCDE -->
@@ -347,6 +364,23 @@ export class Counter {
 
 ---
 
+<!-- @slide Angular videó -->
+<!-- @slide-theme slate red rose -->
+
+<!-- @color red -->
+## Fireship · videó
+
+# Angular 100 másodpercben
+
+<!-- @width 64% -->
+<!-- @youtube -->
+[Angular 100 másodpercben](https://www.youtube.com/watch?v=Ata9cSC2WpM)
+
+<!-- @note -->
+> Fireship összefoglalója az Angularról: komponensek, dekorátorok, dependency injection, CLI. A videó régebbi, a standalone komponensek és a signalok előtti Angulart mutatja.
+
+---
+
 <!-- @slide Vue története -->
 <!-- @slide-theme slate emerald green -->
 <!-- @layout AAAA/BCDE/BCDE -->
@@ -434,6 +468,33 @@ const count = ref(0);
 
 ---
 
+<!-- @slide Vue videó -->
+<!-- @slide-theme slate emerald green -->
+<!-- @grid AB -->
+
+<!-- @color emerald -->
+## Fireship · videó
+
+# Vue 100 másodpercben
+
+<!-- @youtube -->
+[Vue 100 másodpercben](https://www.youtube.com/watch?v=nhBVL41-_Cw)
+
+***
+
+<!-- @color emerald -->
+## Fireship · videó
+
+# Nuxt 100 másodpercben
+
+<!-- @youtube -->
+[Nuxt 100 másodpercben](https://www.youtube.com/watch?v=dCxSsr5xuL8)
+
+<!-- @note -->
+> Két rövid videó: bal oldalt maga a Vue, jobb oldalt a Nuxt, a Vue-ra épülő meta-framework (routing, SSR, SSG). Nuxt a Vue-nak az, ami a Next.js a Reactnek.
+
+---
+
 <!-- @slide Svelte története -->
 <!-- @slide-theme stone orange orange -->
 <!-- @layout AAAA/BCDE/BCDE -->
@@ -515,6 +576,23 @@ Rich Harris (The Guardian) — „a framework, ami eltűnik”
 
 <!-- @note -->
 > A Svelte fordító: build időben célzott DOM-utasításokat generál, így nincs szükség Virtual DOM-ra és nagy runtime-ra. A Svelte 5 runes (`$state`, `$derived`, `$effect`) explicitté tették a reaktivitást, így komponenseken kívül is működik. Évek óta a fejlesztői elégedettségi felmérések élén van.
+
+---
+
+<!-- @slide Svelte videó -->
+<!-- @slide-theme stone orange orange -->
+
+<!-- @color orange -->
+## Fireship · videó
+
+# SvelteKit 100 másodpercben
+
+<!-- @width 64% -->
+<!-- @youtube -->
+[SvelteKit 100 másodpercben](https://www.youtube.com/watch?v=H1eEFfAkIik)
+
+<!-- @note -->
+> A SvelteKit a Svelte hivatalos meta-frameworkje: fájlalapú routing, SSR, SSG, szerveroldali load függvények. A videó a Svelte alapjait is röviden mutatja.
 
 ---
 
@@ -601,6 +679,23 @@ const posts = await getCollection("blog");
 
 <!-- @note -->
 > A frontmatter (a `---` közötti rész) a szerveren vagy build időben fut, a kliensre csak HTML kerül. A `Counter` komponens egy „sziget”: a `client:visible` miatt csak akkor tölt le JavaScriptet, amikor a felhasználó odagörget. Más opciók: `client:load`, `client:idle`. Egy oldalon akár React és Svelte komponens is lehet egyszerre.
+
+---
+
+<!-- @slide Astro videó -->
+<!-- @slide-theme zinc violet fuchsia -->
+
+<!-- @color violet -->
+## Fireship · videó
+
+# Astro 100 másodpercben
+
+<!-- @width 64% -->
+<!-- @youtube -->
+[Astro 100 másodpercben](https://www.youtube.com/watch?v=dsTXcSeAZq8)
+
+<!-- @note -->
+> Fireship összefoglalója az Astróról: islands architektúra, tartalomközpontú oldalak, több UI framework egy projektben.
 
 ---
 
