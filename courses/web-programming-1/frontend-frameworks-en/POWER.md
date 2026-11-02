@@ -537,6 +537,33 @@ timeline
 
 ---
 
+<!-- @slide Svelte in 100 seconds -->
+<!-- @slide-theme stone orange orange -->
+
+<!-- @space -->
+
+# Svelte in 100 seconds
+
+<!-- @space -->
+
+<!-- @note -->
+> Next: Fireship's two-minute summary of Svelte.
+
+---
+
+<!-- @slide Svelte video -->
+<!-- @slide-theme stone orange orange -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[Svelte in 100 seconds](https://www.youtube.com/watch?v=rv3Yq-B8qp4)
+
+<!-- @note -->
+> Fireship's summary of Svelte: a compile-time framework, no Virtual DOM, reactive variables, little boilerplate. SvelteKit, its meta-framework, comes next.
+
+---
+
 <!-- @slide SvelteKit in 100 seconds -->
 <!-- @slide-theme stone orange orange -->
 
@@ -551,7 +578,7 @@ timeline
 
 ---
 
-<!-- @slide Svelte video -->
+<!-- @slide SvelteKit video -->
 <!-- @slide-theme stone orange orange -->
 
 <!-- @cover -->

@@ -537,6 +537,33 @@ timeline
 
 ---
 
+<!-- @slide Svelte in 100 seconds -->
+<!-- @slide-theme stone orange orange -->
+
+<!-- @space -->
+
+# Svelte in 100 seconds
+
+<!-- @space -->
+
+<!-- @note -->
+> Következik a Fireship kb. kétperces összefoglalója: Svelte.
+
+---
+
+<!-- @slide Svelte videó -->
+<!-- @slide-theme stone orange orange -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[Svelte in 100 seconds](https://www.youtube.com/watch?v=rv3Yq-B8qp4)
+
+<!-- @note -->
+> Fireship összefoglalója a Svelte-ről: fordítási idejű framework, nincs Virtual DOM, reaktív változók, kevés boilerplate. Utána jön a SvelteKit, a Svelte meta-frameworkje.
+
+---
+
 <!-- @slide SvelteKit in 100 seconds -->
 <!-- @slide-theme stone orange orange -->
 
@@ -551,7 +578,7 @@ timeline
 
 ---
 
-<!-- @slide Svelte videó -->
+<!-- @slide SvelteKit videó -->
 <!-- @slide-theme stone orange orange -->
 
 <!-- @cover -->
