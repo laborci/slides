@@ -259,12 +259,8 @@ export function Counter() {
 <!-- @slide React videó -->
 <!-- @slide-theme slate cyan sky -->
 
-<!-- @color cyan -->
-## Fireship · videó
+<!-- @cover -->
 
-# React 100 másodpercben
-
-<!-- @width 64% -->
 <!-- @youtube -->
 [React 100 másodpercben](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
 
@@ -367,12 +363,8 @@ export class Counter {
 <!-- @slide Angular videó -->
 <!-- @slide-theme slate red rose -->
 
-<!-- @color red -->
-## Fireship · videó
+<!-- @cover -->
 
-# Angular 100 másodpercben
-
-<!-- @width 64% -->
 <!-- @youtube -->
 [Angular 100 másodpercben](https://www.youtube.com/watch?v=Ata9cSC2WpM)
 
@@ -470,28 +462,26 @@ const count = ref(0);
 
 <!-- @slide Vue videó -->
 <!-- @slide-theme slate emerald green -->
-<!-- @grid AB -->
 
-<!-- @color emerald -->
-## Fireship · videó
-
-# Vue 100 másodpercben
+<!-- @cover -->
 
 <!-- @youtube -->
 [Vue 100 másodpercben](https://www.youtube.com/watch?v=nhBVL41-_Cw)
 
-***
+<!-- @note -->
+> Fireship rövid összefoglalója a Vue-ról: reaktív állapot, template szintaxis, single-file komponensek.
 
-<!-- @color emerald -->
-## Fireship · videó
+---
+<!-- @slide Nuxt videó -->
+<!-- @slide-theme slate emerald green -->
 
-# Nuxt 100 másodpercben
+<!-- @cover -->
 
 <!-- @youtube -->
 [Nuxt 100 másodpercben](https://www.youtube.com/watch?v=dCxSsr5xuL8)
 
 <!-- @note -->
-> Két rövid videó: bal oldalt maga a Vue, jobb oldalt a Nuxt, a Vue-ra épülő meta-framework (routing, SSR, SSG). Nuxt a Vue-nak az, ami a Next.js a Reactnek.
+> A Nuxt a Vue-ra épülő meta-framework (fájlalapú routing, SSR, SSG). Nuxt a Vue-nak az, ami a Next.js a Reactnek.
 
 ---
 
@@ -582,12 +572,8 @@ Rich Harris (The Guardian) — „a framework, ami eltűnik”
 <!-- @slide Svelte videó -->
 <!-- @slide-theme stone orange orange -->
 
-<!-- @color orange -->
-## Fireship · videó
+<!-- @cover -->
 
-# SvelteKit 100 másodpercben
-
-<!-- @width 64% -->
 <!-- @youtube -->
 [SvelteKit 100 másodpercben](https://www.youtube.com/watch?v=H1eEFfAkIik)
 
@@ -685,12 +671,8 @@ const posts = await getCollection("blog");
 <!-- @slide Astro videó -->
 <!-- @slide-theme zinc violet fuchsia -->
 
-<!-- @color violet -->
-## Fireship · videó
+<!-- @cover -->
 
-# Astro 100 másodpercben
-
-<!-- @width 64% -->
 <!-- @youtube -->
 [Astro 100 másodpercben](https://www.youtube.com/watch?v=dsTXcSeAZq8)
 

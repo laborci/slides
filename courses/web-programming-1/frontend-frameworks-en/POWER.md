@@ -259,12 +259,8 @@ export function Counter() {
 <!-- @slide React video -->
 <!-- @slide-theme slate cyan sky -->
 
-<!-- @color cyan -->
-## Fireship · video
+<!-- @cover -->
 
-# React in 100 seconds
-
-<!-- @width 64% -->
 <!-- @youtube -->
 [React in 100 seconds](https://www.youtube.com/watch?v=Tn6-PIqc4UM)
 
@@ -367,12 +363,8 @@ export class Counter {
 <!-- @slide Angular video -->
 <!-- @slide-theme slate red rose -->
 
-<!-- @color red -->
-## Fireship · video
+<!-- @cover -->
 
-# Angular in 100 seconds
-
-<!-- @width 64% -->
 <!-- @youtube -->
 [Angular in 100 seconds](https://www.youtube.com/watch?v=Ata9cSC2WpM)
 
@@ -470,28 +462,26 @@ const count = ref(0);
 
 <!-- @slide Vue video -->
 <!-- @slide-theme slate emerald green -->
-<!-- @grid AB -->
 
-<!-- @color emerald -->
-## Fireship · video
-
-# Vue in 100 seconds
+<!-- @cover -->
 
 <!-- @youtube -->
 [Vue in 100 seconds](https://www.youtube.com/watch?v=nhBVL41-_Cw)
 
-***
+<!-- @note -->
+> Fireship's short summary of Vue: reactive state, template syntax, single-file components.
 
-<!-- @color emerald -->
-## Fireship · video
+---
+<!-- @slide Nuxt video -->
+<!-- @slide-theme slate emerald green -->
 
-# Nuxt in 100 seconds
+<!-- @cover -->
 
 <!-- @youtube -->
 [Nuxt in 100 seconds](https://www.youtube.com/watch?v=dCxSsr5xuL8)
 
 <!-- @note -->
-> Two short videos: Vue itself on the left, Nuxt on the right, the meta-framework built on Vue (routing, SSR, SSG). Nuxt is to Vue what Next.js is to React.
+> Nuxt is the meta-framework built on Vue (file-based routing, SSR, SSG). Nuxt is to Vue what Next.js is to React.
 
 ---
 
@@ -582,12 +572,8 @@ Rich Harris (The Guardian) — “the disappearing framework”
 <!-- @slide Svelte video -->
 <!-- @slide-theme stone orange orange -->
 
-<!-- @color orange -->
-## Fireship · video
+<!-- @cover -->
 
-# SvelteKit in 100 seconds
-
-<!-- @width 64% -->
 <!-- @youtube -->
 [SvelteKit in 100 seconds](https://www.youtube.com/watch?v=H1eEFfAkIik)
 
@@ -685,12 +671,8 @@ const posts = await getCollection("blog");
 <!-- @slide Astro video -->
 <!-- @slide-theme zinc violet fuchsia -->
 
-<!-- @color violet -->
-## Fireship · video
+<!-- @cover -->
 
-# Astro in 100 seconds
-
-<!-- @width 64% -->
 <!-- @youtube -->
 [Astro in 100 seconds](https://www.youtube.com/watch?v=dsTXcSeAZq8)
 
