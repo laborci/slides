@@ -54,7 +54,7 @@ async function main() {
   const file = path.resolve(opts.file);
   const markdown = await readFile(file, "utf8");
   const outDir = path.resolve(
-    opts.out ?? path.join(path.dirname(file), "render-out", path.basename(file, path.extname(file)))
+    opts.out ?? path.join(path.dirname(file), "render-out")
   );
 
   const browser = await puppeteer.launch({
@@ -100,7 +100,7 @@ async function main() {
     } else {
       const warnings = result.issues.filter((i) => i.severity === "warning").length;
       const errors = result.issues.length - warnings;
-      console.log(`${path.basename(file)}: ${result.slides} slides, ${errors} error(s), ${warnings} warning(s)`);
+      console.log(`${path.relative(process.cwd(), file)}: ${result.slides} slides, ${errors} error(s), ${warnings} warning(s)`);
       for (const i of result.issues) {
         const where = `slide ${i.slide}${i.panel ? `, panel ${i.panel}` : ""}`;
         console.log(`  ${i.severity === "warning" ? "warning" : "error  "} ${where}: ${i.message}`);
