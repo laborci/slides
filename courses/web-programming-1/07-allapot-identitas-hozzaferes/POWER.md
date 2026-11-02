@@ -293,6 +293,33 @@ Viselkedés több oldalon át (9.6)
 
 ---
 
+<!-- @slide What Are Cookies? -->
+<!-- @slide-theme zinc amber zinc -->
+
+<!-- @space -->
+
+# What Are Cookies?
+
+<!-- @space -->
+
+<!-- @note -->
+> Videó következik: What Are Cookies?.
+
+---
+
+<!-- @slide What Are Cookies? videó -->
+<!-- @slide-theme zinc amber zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[What Are Cookies?](https://www.youtube.com/watch?v=yoE9-tNvhRs)
+
+<!-- @note -->
+> Osano, kb. másfél perc: mi a cookie, ki teszi le és mire használják. Egyszerű, nem fejlesztőknek szóló bevezető, jó ráhangolódás a 7.2-höz.
+
+---
+
 <!-- @slide Bejelentkezés cookie-val -->
 <!-- @slide-theme zinc amber zinc -->
 <!-- @layout AB -->
@@ -387,6 +414,33 @@ sequenceDiagram
 
 ---
 
+<!-- @slide HTTP Cookies in 5 Minutes -->
+<!-- @slide-theme zinc amber zinc -->
+
+<!-- @space -->
+
+# HTTP Cookies in 5 Minutes
+
+<!-- @space -->
+
+<!-- @note -->
+> Videó következik: HTTP Cookies in 5 Minutes.
+
+---
+
+<!-- @slide HTTP Cookies in 5 Minutes videó -->
+<!-- @slide-theme zinc amber zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[HTTP Cookies in 5 Minutes](https://www.youtube.com/watch?v=EqvUF_tVry0)
+
+<!-- @note -->
+> SoftwareEngenius, 5 perc: hogyan jön létre a cookie (Set-Cookie fejléc), és milyen biztonsági mechanizmusok védik. Az előző dia attribútumait mutatja működés közben.
+
+---
+
 <!-- @slide HttpOnly és SameSite -->
 <!-- @slide-theme zinc amber zinc -->
 <!-- @grid AB -->
@@ -420,6 +474,33 @@ A böngésző a kérésekhez továbbra is csatolja.
 
 ---
 
+<!-- @slide SameSite Cookies -->
+<!-- @slide-theme zinc amber zinc -->
+
+<!-- @space -->
+
+# SameSite Cookies
+
+<!-- @space -->
+
+<!-- @note -->
+> Videó következik: SameSite Cookies.
+
+---
+
+<!-- @slide SameSite Cookies videó -->
+<!-- @slide-theme zinc amber zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[SameSite Cookies](https://www.youtube.com/watch?v=goQlKiynWXU)
+
+<!-- @note -->
+> Duende Software, kb. 6 perc: a SameSite Strict, Lax és None közötti különbség, és hogy miért véd a CSRF ellen.
+
+---
+
 <!-- @slide Harmadik fél cookie -->
 <!-- @slide-theme zinc amber zinc -->
 <!-- @layout AB -->
@@ -449,6 +530,33 @@ A cookie-t az a webhely állítja be, amelyet a felhasználó megnyitott.
 
 <!-- @note -->
 > Ugyanaz a hirdetési szolgáltató sok webhelyen jelen lehet, és a cookie-ja alapján bárhol felismerheti a felhasználót. Ezért blokkolják a böngészők egyre inkább alapértelmezésként, és ezért kér az EU-s szabályozás átláthatóságot, illetve a működéshez nem szükséges cookie-khoz hozzájárulást. Részletesen: 9.6.
+
+---
+
+<!-- @slide How Third-Party Cookies Work -->
+<!-- @slide-theme zinc amber zinc -->
+
+<!-- @space -->
+
+# How Third-Party Cookies Work
+
+<!-- @space -->
+
+<!-- @note -->
+> Videó következik: How Third-Party Cookies Work.
+
+---
+
+<!-- @slide How Third-Party Cookies Work videó -->
+<!-- @slide-theme zinc amber zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[How Third-Party Cookies Work](https://www.youtube.com/watch?v=GCsrSaqx6UM)
+
+<!-- @note -->
+> CookieYes, kb. 3,5 perc: hogyan követik a felhasználót a harmadik féltől származó cookie-k több oldalon át, és miért korlátozzák őket a böngészők.
 
 ---
 
@@ -578,6 +686,33 @@ Cookie, Web Storage, IndexedDB — mi a token, mi a JWT, és miért két külön
 
 ---
 
+<!-- @slide Session vs Token Authentication in 100 Seconds -->
+<!-- @slide-theme zinc violet zinc -->
+
+<!-- @space -->
+
+# Session vs Token Authentication in 100 Seconds
+
+<!-- @space -->
+
+<!-- @note -->
+> Videó következik: Session vs Token Authentication in 100 Seconds.
+
+---
+
+<!-- @slide Session vs Token Authentication in 100 Seconds videó -->
+<!-- @slide-theme zinc violet zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[Session vs Token Authentication in 100 Seconds](https://www.youtube.com/watch?v=UBUNrFtufWo)
+
+<!-- @note -->
+> Fireship, kb. 2 perc: a szerveroldali munkamenet (session ID cookie-ban) és a token alapú hitelesítés (JWT) összevetése. Pont a dia kérdését foglalja össze.
+
+---
+
 <!-- @slide Mit hová -->
 <!-- @slide-theme zinc violet zinc -->
 
@@ -616,6 +751,34 @@ Cookie, Web Storage, IndexedDB — mi a token, mi a JWT, és miért két külön
 
 ---
 
+<!-- @slide XSS vs CSRF vs SSRF -->
+<!-- @slide-theme zinc violet zinc -->
+
+<!-- @space -->
+
+# XSS vs CSRF vs SSRF
+
+<!-- @space -->
+
+<!-- @note -->
+> Videó következik: XSS vs CSRF vs SSRF.
+
+---
+
+<!-- @slide XSS vs CSRF vs SSRF videó -->
+<!-- @slide-theme zinc violet zinc -->
+<!-- @layout .A. collapse -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[XSS vs CSRF vs SSRF](https://www.youtube.com/watch?v=2-SOL2TdyNw)
+
+<!-- @note -->
+> The Network Knight, kb. 1 perc (függőleges Short): a három támadás egy mondatban. XSS ellen véd a HttpOnly cookie, CSRF ellen a SameSite és a CSRF token. Az SSRF szerveroldali, most csak a teljesség kedvéért.
+
+---
+
 <!-- @slide Bearer token -->
 <!-- @slide-theme zinc violet zinc -->
 <!-- @layout AABBB -->
@@ -645,6 +808,33 @@ Authorization: Bearer <token>
 
 <!-- @note -->
 > A token egy érték, amelyet egy protokoll meghatározott célra ad ki és ellenőriz. API-knál a leggyakoribb a hozzáférési token: egy mobilalkalmazás belépéskor kap egyet, és minden kérésnél ezzel igazolja magát az `Authorization` fejlécben. A bearer szabályok: TLS nélkül útközben ellopható; az URL naplókba, előzményekbe, megosztott linkekbe kerül; a rövid élettartam korlátozza egy ellopott token kárát.
+
+---
+
+<!-- @slide CORS in 100 Seconds -->
+<!-- @slide-theme zinc violet zinc -->
+
+<!-- @space -->
+
+# CORS in 100 Seconds
+
+<!-- @space -->
+
+<!-- @note -->
+> Videó következik: CORS in 100 Seconds.
+
+---
+
+<!-- @slide CORS in 100 Seconds videó -->
+<!-- @slide-theme zinc violet zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[CORS in 100 Seconds](https://www.youtube.com/watch?v=4KHiSt0oLJ0)
+
+<!-- @note -->
+> Fireship, kb. 2,5 perc: a Same-Origin Policy és a CORS. Ha a frontend egy másik originen futó API-t hív Bearer tokennel, a böngésző előbb preflight kérést küld, és a szervernek kell engedélyeznie az Authorization fejlécet. Cookie-s kérésnél a credentials beállítás is kell.
 
 ---
 
@@ -690,6 +880,33 @@ szerep=oktato átírva   → ÉRVÉNYTELEN
 
 ---
 
+<!-- @slide JWT vs Session Management in Under 5 Minutes -->
+<!-- @slide-theme zinc violet zinc -->
+
+<!-- @space -->
+
+# JWT vs Session Management in Under 5 Minutes
+
+<!-- @space -->
+
+<!-- @note -->
+> Videó következik: JWT vs Session Management in Under 5 Minutes.
+
+---
+
+<!-- @slide JWT vs Session Management in Under 5 Minutes videó -->
+<!-- @slide-theme zinc violet zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[JWT vs Session Management in Under 5 Minutes](https://www.youtube.com/watch?v=XqcVWzrwsj4)
+
+<!-- @note -->
+> 7urtle JavaScript, kb. 5 perc: a JWT felépítése és mikor jobb a hagyományos munkamenet.
+
+---
+
 <!-- @slide JWT tanulságok -->
 <!-- @slide-theme zinc violet zinc -->
 <!-- @grid ABC -->
@@ -721,6 +938,33 @@ Az aláírás miatt **észrevétlenül nem módosítható** — aki nem ismeri a
 
 <!-- @note -->
 > Az `exp` egy Unix-időbélyeg: az 1970. január 1. óta eltelt másodpercek. A JWT önálló (self-contained): a szerver az aláírásból, nyilvántartás nélkül dönti el, érvényes-e — ez jól illik az állapotmentes szolgáltatásokhoz, de a visszavonást megnehezíti. A munkamenet-azonosítónál fordítva: minden kérésnél nyilvántartást kell nézni, viszont egyetlen törléssel megszüntethető.
+
+---
+
+<!-- @slide What Is JWT and Why Should You Use JWT -->
+<!-- @slide-theme zinc violet zinc -->
+
+<!-- @space -->
+
+# What Is JWT and Why Should You Use JWT
+
+<!-- @space -->
+
+<!-- @note -->
+> Videó következik: What Is JWT and Why Should You Use JWT.
+
+---
+
+<!-- @slide What Is JWT and Why Should You Use JWT videó -->
+<!-- @slide-theme zinc violet zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[What Is JWT and Why Should You Use JWT](https://www.youtube.com/watch?v=7Q17ubqLfaM)
+
+<!-- @note -->
+> Web Dev Simplified, kb. 15 perc, ezért inkább otthoni nézésre: a header, payload és aláírás részletesen, és hogy miért nem titkosítás a JWT.
 
 ---
 
@@ -1046,6 +1290,33 @@ A Kurzuspont a hallgató **külső naptárába** írna. Ha elkérné a jelszót:
 
 ---
 
+<!-- @slide OAuth 2 Explained in Simple Terms -->
+<!-- @slide-theme zinc emerald zinc -->
+
+<!-- @space -->
+
+# OAuth 2 Explained in Simple Terms
+
+<!-- @space -->
+
+<!-- @note -->
+> Videó következik: OAuth 2 Explained in Simple Terms.
+
+---
+
+<!-- @slide OAuth 2 Explained in Simple Terms videó -->
+<!-- @slide-theme zinc emerald zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[OAuth 2 Explained in Simple Terms](https://www.youtube.com/watch?v=ZV5yTm4pT8g)
+
+<!-- @note -->
+> ByteByteGo, kb. 4,5 perc: az OAuth 2 szereplői és az engedélykódos folyamat animációval. Jó átvezetés a következő diákhoz.
+
+---
+
 <!-- @slide Engedélykódos folyamat -->
 <!-- @slide-theme zinc emerald zinc -->
 <!-- @layout AB -->
@@ -1142,6 +1413,34 @@ code_challenge = BASE64URL(SHA256(code_verifier))
 
 ---
 
+<!-- @slide Authorization Code Flow with PKCE -->
+<!-- @slide-theme zinc emerald zinc -->
+
+<!-- @space -->
+
+# Authorization Code Flow with PKCE
+
+<!-- @space -->
+
+<!-- @note -->
+> Videó következik: Authorization Code Flow with PKCE.
+
+---
+
+<!-- @slide Authorization Code Flow with PKCE videó -->
+<!-- @slide-theme zinc emerald zinc -->
+<!-- @layout .A. collapse -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[Authorization Code Flow with PKCE](https://www.youtube.com/watch?v=hRjAEblltjc)
+
+<!-- @note -->
+> FusionAuth, kb. 1,5 perc (függőleges Short): az engedélykódos folyamat PKCE-vel, a code verifier és a code challenge szerepe.
+
+---
+
 <!-- @slide OAuth nem bejelentkezés -->
 <!-- @slide-theme zinc emerald zinc -->
 <!-- @layout AB -->
@@ -1204,6 +1503,33 @@ Ugyanaz a folyamat, de a kliens egy **ID tokent** is kap: egy JWT-t arról, kit 
 
 ---
 
+<!-- @slide OpenID Connect and OAuth 2 in Under 10 Minutes -->
+<!-- @slide-theme zinc emerald zinc -->
+
+<!-- @space -->
+
+# OpenID Connect and OAuth 2 in Under 10 Minutes
+
+<!-- @space -->
+
+<!-- @note -->
+> Videó következik: OpenID Connect and OAuth 2 in Under 10 Minutes.
+
+---
+
+<!-- @slide OpenID Connect and OAuth 2 in Under 10 Minutes videó -->
+<!-- @slide-theme zinc emerald zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[OpenID Connect and OAuth 2 in Under 10 Minutes](https://www.youtube.com/watch?v=nPZ8QDZXtLI)
+
+<!-- @note -->
+> kubucation, kb. 10 perc: hogyan épül az OIDC az OAuth 2-re, mi az ID token. Órán részletekben, vagy otthonra.
+
+---
+
 <!-- @slide OAuth vs OIDC -->
 <!-- @slide-theme zinc emerald zinc -->
 
@@ -1221,6 +1547,33 @@ Ugyanaz a folyamat, de a kliens egy **ID tokent** is kap: egy JWT-t arról, kit 
 
 <!-- @note -->
 > A felhasználónak a kettő akár egyetlen lépésnek is tűnhet („Belépés és naptár engedélyezése”), de fogalmilag különböznek: az első azonosít, a második hozzáférést delegál. Mindkét esetben érvényben marad a Kurzuspont saját jogosultsági döntése: attól, hogy Anne az egyetemi azonosítójával belépett, még nem nézheti meg Bill jelentkezéseit.
+
+---
+
+<!-- @slide An Illustrated Guide to OAuth and OpenID Connect -->
+<!-- @slide-theme zinc emerald zinc -->
+
+<!-- @space -->
+
+# An Illustrated Guide to OAuth and OpenID Connect
+
+<!-- @space -->
+
+<!-- @note -->
+> Videó következik: An Illustrated Guide to OAuth and OpenID Connect.
+
+---
+
+<!-- @slide An Illustrated Guide to OAuth and OpenID Connect videó -->
+<!-- @slide-theme zinc emerald zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[An Illustrated Guide to OAuth and OpenID Connect](https://www.youtube.com/watch?v=t18YB3xDfXI)
+
+<!-- @note -->
+> OktaDev, kb. 16,5 perc, otthoni nézésre: rajzos összefoglaló az egész 7.5-ről, a delegált hozzáféréstől az ID tokenig.
 
 ---
 
@@ -1328,6 +1681,33 @@ sequenceDiagram
 
 <!-- @note -->
 > A kurzusrendszer átirányít az egyetemi identitásszolgáltatóhoz, ott a hallgató belép, és a kurzusrendszer létrehozza a saját munkamenetét. Később a könyvtár is oda irányít, de az identitásszolgáltató emlékszik a hallgatóra (neki is van munkamenete a böngészővel), ezért nem kér újra jelszót. Közös munkamenet nem is lehetne, hiszen a cookie-k a saját hosztjukhoz kötöttek (7.2).
+
+---
+
+<!-- @slide What Is Single Sign-On (SSO)? -->
+<!-- @slide-theme zinc cyan zinc -->
+
+<!-- @space -->
+
+# What Is Single Sign-On (SSO)?
+
+<!-- @space -->
+
+<!-- @note -->
+> Videó következik: What Is Single Sign-On (SSO)?.
+
+---
+
+<!-- @slide What Is Single Sign-On (SSO)? videó -->
+<!-- @slide-theme zinc cyan zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[What Is Single Sign-On (SSO)?](https://www.youtube.com/watch?v=O1cRJWYF-g4)
+
+<!-- @note -->
+> ByteByteGo, kb. 5 perc: az SSO folyamata lépésről lépésre, SAML és OIDC alapon.
 
 ---
 
