@@ -256,6 +256,20 @@ export function Counter() {
 
 ---
 
+<!-- @slide React in 100 seconds -->
+<!-- @slide-theme slate cyan sky -->
+
+<!-- @space -->
+
+# React in 100 seconds
+
+<!-- @space -->
+
+<!-- @note -->
+> Következik a Fireship kb. kétperces összefoglalója: React.
+
+---
+
 <!-- @slide React videó -->
 <!-- @slide-theme slate cyan sky -->
 
@@ -360,6 +374,20 @@ export class Counter {
 
 ---
 
+<!-- @slide Angular in 100 seconds -->
+<!-- @slide-theme slate red rose -->
+
+<!-- @space -->
+
+# Angular in 100 seconds
+
+<!-- @space -->
+
+<!-- @note -->
+> Következik a Fireship kb. kétperces összefoglalója: Angular.
+
+---
+
 <!-- @slide Angular videó -->
 <!-- @slide-theme slate red rose -->
 
@@ -460,6 +488,20 @@ const count = ref(0);
 
 ---
 
+<!-- @slide Vue in 100 seconds -->
+<!-- @slide-theme slate emerald green -->
+
+<!-- @space -->
+
+# Vue in 100 seconds
+
+<!-- @space -->
+
+<!-- @note -->
+> Következik a Fireship kb. kétperces összefoglalója: Vue.
+
+---
+
 <!-- @slide Vue videó -->
 <!-- @slide-theme slate emerald green -->
 
@@ -472,6 +514,20 @@ const count = ref(0);
 > Fireship rövid összefoglalója a Vue-ról: reaktív állapot, template szintaxis, single-file komponensek.
 
 ---
+<!-- @slide Nuxt in 100 seconds -->
+<!-- @slide-theme slate emerald green -->
+
+<!-- @space -->
+
+# Nuxt in 100 seconds
+
+<!-- @space -->
+
+<!-- @note -->
+> Következik a Fireship kb. kétperces összefoglalója: Nuxt.
+
+---
+
 <!-- @slide Nuxt videó -->
 <!-- @slide-theme slate emerald green -->
 
@@ -566,6 +622,20 @@ Rich Harris (The Guardian) — „a framework, ami eltűnik”
 
 <!-- @note -->
 > A Svelte fordító: build időben célzott DOM-utasításokat generál, így nincs szükség Virtual DOM-ra és nagy runtime-ra. A Svelte 5 runes (`$state`, `$derived`, `$effect`) explicitté tették a reaktivitást, így komponenseken kívül is működik. Évek óta a fejlesztői elégedettségi felmérések élén van.
+
+---
+
+<!-- @slide SvelteKit in 100 seconds -->
+<!-- @slide-theme stone orange orange -->
+
+<!-- @space -->
+
+# SvelteKit in 100 seconds
+
+<!-- @space -->
+
+<!-- @note -->
+> Következik a Fireship kb. kétperces összefoglalója: SvelteKit.
 
 ---
 
@@ -665,6 +735,20 @@ const posts = await getCollection("blog");
 
 <!-- @note -->
 > A frontmatter (a `---` közötti rész) a szerveren vagy build időben fut, a kliensre csak HTML kerül. A `Counter` komponens egy „sziget”: a `client:visible` miatt csak akkor tölt le JavaScriptet, amikor a felhasználó odagörget. Más opciók: `client:load`, `client:idle`. Egy oldalon akár React és Svelte komponens is lehet egyszerre.
+
+---
+
+<!-- @slide Astro in 100 seconds -->
+<!-- @slide-theme zinc violet fuchsia -->
+
+<!-- @space -->
+
+# Astro in 100 seconds
+
+<!-- @space -->
+
+<!-- @note -->
+> Következik a Fireship kb. kétperces összefoglalója: Astro.
 
 ---
 

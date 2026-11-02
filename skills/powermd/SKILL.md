@@ -96,6 +96,6 @@ No Chrome or Node available (e.g. a sandbox without a browser)? Say so. Keep the
 - **Mermaid inside `@contain`:** the diagram scales to the panel width. A wide, short diagram (longer labels, `LR`) fits better than a tall one. `@width 90%` before it sometimes helps and sometimes makes it overflow, so check.
 - **Video (`@youtube`):**
   - Headless /render shows an empty frame, and it does not flag a video that runs off the slide, so check the PNG.
-  - House style: one video per slide, no text, `<!-- @cover -->` then `<!-- @youtube -->` and the link. The video fills the whole slide.
+  - House style: one video per slide, no text, `<!-- @cover -->` then `<!-- @youtube -->` and the link. The video fills the whole slide. Before it, a title slide with only `# <Name> in 100 seconds`, centred between two `@space` directives.
 - **Callouts:** a callout below a table or code is the usual cause of "crowded" warnings. Move the extra sentence into the note first.
 - **Order of fixes for a crowded slide:** move text to the note, then split the slide, then reduce scale. Don't go below about 65%.

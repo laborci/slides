@@ -256,6 +256,20 @@ export function Counter() {
 
 ---
 
+<!-- @slide React in 100 seconds -->
+<!-- @slide-theme slate cyan sky -->
+
+<!-- @space -->
+
+# React in 100 seconds
+
+<!-- @space -->
+
+<!-- @note -->
+> Next: Fireship's two-minute summary of React.
+
+---
+
 <!-- @slide React video -->
 <!-- @slide-theme slate cyan sky -->
 
@@ -360,6 +374,20 @@ export class Counter {
 
 ---
 
+<!-- @slide Angular in 100 seconds -->
+<!-- @slide-theme slate red rose -->
+
+<!-- @space -->
+
+# Angular in 100 seconds
+
+<!-- @space -->
+
+<!-- @note -->
+> Next: Fireship's two-minute summary of Angular.
+
+---
+
 <!-- @slide Angular video -->
 <!-- @slide-theme slate red rose -->
 
@@ -460,6 +488,20 @@ const count = ref(0);
 
 ---
 
+<!-- @slide Vue in 100 seconds -->
+<!-- @slide-theme slate emerald green -->
+
+<!-- @space -->
+
+# Vue in 100 seconds
+
+<!-- @space -->
+
+<!-- @note -->
+> Next: Fireship's two-minute summary of Vue.
+
+---
+
 <!-- @slide Vue video -->
 <!-- @slide-theme slate emerald green -->
 
@@ -472,6 +514,20 @@ const count = ref(0);
 > Fireship's short summary of Vue: reactive state, template syntax, single-file components.
 
 ---
+<!-- @slide Nuxt in 100 seconds -->
+<!-- @slide-theme slate emerald green -->
+
+<!-- @space -->
+
+# Nuxt in 100 seconds
+
+<!-- @space -->
+
+<!-- @note -->
+> Next: Fireship's two-minute summary of Nuxt.
+
+---
+
 <!-- @slide Nuxt video -->
 <!-- @slide-theme slate emerald green -->
 
@@ -566,6 +622,20 @@ Rich Harris (The Guardian) — “the disappearing framework”
 
 <!-- @note -->
 > Svelte is a compiler: at build time it generates targeted DOM instructions, so it needs neither a Virtual DOM nor a large runtime. Svelte 5 runes (`$state`, `$derived`, `$effect`) made reactivity explicit, so it also works outside components. It has topped developer satisfaction surveys for years.
+
+---
+
+<!-- @slide SvelteKit in 100 seconds -->
+<!-- @slide-theme stone orange orange -->
+
+<!-- @space -->
+
+# SvelteKit in 100 seconds
+
+<!-- @space -->
+
+<!-- @note -->
+> Next: Fireship's two-minute summary of SvelteKit.
 
 ---
 
@@ -665,6 +735,20 @@ const posts = await getCollection("blog");
 
 <!-- @note -->
 > The frontmatter (between the `---` lines) runs on the server or at build time; only HTML reaches the client. The `Counter` component is an “island”: thanks to `client:visible` it only downloads JavaScript when the user scrolls to it. Other options: `client:load`, `client:idle`. A single page can even contain React and Svelte components side by side.
+
+---
+
+<!-- @slide Astro in 100 seconds -->
+<!-- @slide-theme zinc violet fuchsia -->
+
+<!-- @space -->
+
+# Astro in 100 seconds
+
+<!-- @space -->
+
+<!-- @note -->
+> Next: Fireship's two-minute summary of Astro.
 
 ---
 
