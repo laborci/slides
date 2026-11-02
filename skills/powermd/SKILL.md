@@ -94,6 +94,13 @@ No Chrome or Node available (e.g. a sandbox without a browser)? Say so. Keep the
   - 6 columns or long cells: 65–70%.
   - Set `@set-scale` before the table.
 - **Mermaid inside `@contain`:** the diagram scales to the panel width. A wide, short diagram (longer labels, `LR`) fits better than a tall one. `@width 90%` before it sometimes helps and sometimes makes it overflow, so check.
+- **Mermaid `timeline` (history slides):**
+  - It renders huge, black boxes by default, and `@contain` alone does not shrink it.
+  - Working recipe, about 4 periods with 1–2 short events each (no `:` or `**` inside events):
+    - `@layout A/B/B/B/B/B collapse`;
+    - panel A holds `@scale 80%` and the `#` heading;
+    - panel B holds `@contain` and the mermaid block;
+    - the first line of the mermaid block is `%%{init: {"themeVariables": {"fontSize": "14px", "cScale0": "<accent-900 hex>", "cScaleLabel0": "#ffffff", …}}}%%`, with the same pair repeated for cScale1–3.
 - **Video (`@youtube`):**
   - Headless /render shows an empty frame, and it does not flag a video that runs off the slide, so check the PNG.
   - House style: one video per slide, no text, `<!-- @cover -->` then `<!-- @youtube -->` and the link. The video fills the whole slide. Before it, a title slide with only `# <Name> in 100 seconds`, centred between two `@space` directives.

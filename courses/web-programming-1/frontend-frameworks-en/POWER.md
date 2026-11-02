@@ -170,45 +170,23 @@ Angular
 
 <!-- @slide React history -->
 <!-- @slide-theme slate cyan sky -->
-<!-- @layout AAAA/BCDE/BCDE -->
+<!-- @layout A/B/B/B/B/B collapse -->
 
+<!-- @scale 80% -->
 # React — a brief history
 
 ***
 
-<!-- @set-scale 85% -->
+<!-- @contain -->
 
-<!-- @color cyan -->
-### 2011–2013
-
-Jordan Walke, Facebook — open source in 2013
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color cyan -->
-### 2015
-
-**React Native** — the same model on mobile
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color cyan -->
-### 2019
-
-**Hooks** (React 16.8) — functions instead of classes
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color cyan -->
-### 2024–2025
-
-**React 19**, Server Components, **React Compiler**
+```mermaid
+%%{init: {"themeVariables": {"fontSize": "14px", "cScale0": "#164e63", "cScaleLabel0": "#ffffff", "cScale1": "#164e63", "cScaleLabel1": "#ffffff", "cScale2": "#164e63", "cScaleLabel2": "#ffffff", "cScale3": "#164e63", "cScaleLabel3": "#ffffff"}}}%%
+timeline
+  2011–2013 : Jordan Walke, Facebook : open source in 2013
+  2015 : React Native : the same model on mobile
+  2019 : Hooks (React 16.8) : functions instead of classes
+  2024–2025 : React 19, Server Components, React Compiler
+```
 
 <!-- @note -->
 > React was born from a Facebook news feed problem: keeping the DOM in sync with the data by hand had become too complex. At its first presentation many people laughed at JSX — “HTML in JavaScript?” — today it's the industry standard. Hooks completely changed how React code is written in 2019, and Server Components shift the focus back to the server.
@@ -285,45 +263,23 @@ export function Counter() {
 
 <!-- @slide Angular history -->
 <!-- @slide-theme slate red rose -->
-<!-- @layout AAAA/BCDE/BCDE -->
+<!-- @layout A/B/B/B/B/B collapse -->
 
+<!-- @scale 80% -->
 # Angular — a brief history
 
 ***
 
-<!-- @set-scale 85% -->
+<!-- @contain -->
 
-<!-- @color red -->
-### 2010
-
-**AngularJS** (Google) — two-way data binding
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color red -->
-### 2016
-
-**Angular 2** — complete rewrite in TypeScript
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color red -->
-### 2022–2023
-
-Standalone components, **Signals**, new control flow
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color red -->
-### 2025
-
-**Zoneless** by default — a modern, lighter Angular
+```mermaid
+%%{init: {"themeVariables": {"fontSize": "14px", "cScale0": "#7f1d1d", "cScaleLabel0": "#ffffff", "cScale1": "#7f1d1d", "cScaleLabel1": "#ffffff", "cScale2": "#7f1d1d", "cScaleLabel2": "#ffffff", "cScale3": "#7f1d1d", "cScaleLabel3": "#ffffff"}}}%%
+timeline
+  2010 : AngularJS (Google) : two-way data binding
+  2016 : Angular 2 : complete rewrite in TypeScript
+  2022–2023 : Standalone components, Signals, new control flow
+  2025 : Zoneless by default : a modern, lighter Angular
+```
 
 <!-- @note -->
 > AngularJS was a huge success in 2010, but two-way data binding proved slow in large applications. So Angular 2 became a complete rewrite, which scared off many teams — and helped React and Vue rise. Since 2023 people talk about an “Angular renaissance”: signals, a new template syntax, new docs (angular.dev), and a farewell to Zone.js.
@@ -403,45 +359,23 @@ export class Counter {
 
 <!-- @slide Vue history -->
 <!-- @slide-theme slate emerald green -->
-<!-- @layout AAAA/BCDE/BCDE -->
+<!-- @layout A/B/B/B/B/B collapse -->
 
+<!-- @scale 80% -->
 # Vue — a brief history
 
 ***
 
-<!-- @set-scale 85% -->
+<!-- @contain -->
 
-<!-- @color emerald -->
-### 2014
-
-Side project of Evan You (ex-Google, AngularJS)
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color emerald -->
-### 2016
-
-**Vue 2** — Virtual DOM, explosive growth
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color emerald -->
-### 2020
-
-**Vue 3** — Composition API, Proxy reactivity
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color emerald -->
-### 2025
-
-**Vapor Mode** — compiling without a Virtual DOM
+```mermaid
+%%{init: {"themeVariables": {"fontSize": "14px", "cScale0": "#064e3b", "cScaleLabel0": "#ffffff", "cScale1": "#064e3b", "cScaleLabel1": "#ffffff", "cScale2": "#064e3b", "cScaleLabel2": "#ffffff", "cScale3": "#064e3b", "cScaleLabel3": "#ffffff"}}}%%
+timeline
+  2014 : Side project of Evan You (ex-Google, AngularJS)
+  2016 : Vue 2 : Virtual DOM, explosive growth
+  2020 : Vue 3 : Composition API, Proxy reactivity
+  2025 : Vapor Mode : compiling without a Virtual DOM
+```
 
 <!-- @note -->
 > Evan You worked with AngularJS at Google and wanted to keep what was good about it — templates and reactivity — without the heavy parts. Vue grew big without a corporation behind it, funded by its community, especially popular in Asia and the Laravel community. The Vue 3 migration was painful, but today it's a stable foundation.
@@ -543,45 +477,23 @@ const count = ref(0);
 
 <!-- @slide Svelte history -->
 <!-- @slide-theme stone orange orange -->
-<!-- @layout AAAA/BCDE/BCDE -->
+<!-- @layout A/B/B/B/B/B collapse -->
 
+<!-- @scale 80% -->
 # Svelte — a brief history
 
 ***
 
-<!-- @set-scale 85% -->
+<!-- @contain -->
 
-<!-- @color orange -->
-### 2016
-
-Rich Harris (The Guardian) — “the disappearing framework”
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color orange -->
-### 2019
-
-**Svelte 3** — “Rethinking reactivity”
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color orange -->
-### 2022
-
-**SvelteKit 1.0** — official meta-framework
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color orange -->
-### 2024
-
-**Svelte 5** — runes, explicit reactivity
+```mermaid
+%%{init: {"themeVariables": {"fontSize": "14px", "cScale0": "#7c2d12", "cScaleLabel0": "#ffffff", "cScale1": "#7c2d12", "cScaleLabel1": "#ffffff", "cScale2": "#7c2d12", "cScaleLabel2": "#ffffff", "cScale3": "#7c2d12", "cScaleLabel3": "#ffffff"}}}%%
+timeline
+  2016 : Rich Harris (The Guardian) : “the disappearing framework”
+  2019 : Svelte 3 : “Rethinking reactivity”
+  2022 : SvelteKit 1.0 : official meta-framework
+  2024 : Svelte 5 : runes, explicit reactivity
+```
 
 <!-- @note -->
 > Rich Harris was a graphics journalist at The Guardian, where he needed a tool for fast, lightweight interactive graphics. The idea: the framework shouldn't run in the browser but do its work **at compile time** and disappear. His “Rethinking reactivity” talk for Svelte 3 became legendary. Since 2021 he has worked on Svelte full-time at Vercel.
@@ -654,45 +566,23 @@ Rich Harris (The Guardian) — “the disappearing framework”
 
 <!-- @slide Astro history -->
 <!-- @slide-theme zinc violet fuchsia -->
-<!-- @layout AAAA/BCDE/BCDE -->
+<!-- @layout A/B/B/B/B/B collapse -->
 
+<!-- @scale 80% -->
 # Astro — a brief history
 
 ***
 
-<!-- @set-scale 85% -->
+<!-- @contain -->
 
-<!-- @color violet -->
-### 2021
-
-Started by Fred K. Schott and the Snowpack team
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color violet -->
-### 2022
-
-**Astro 1.0** — Islands architecture
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color violet -->
-### 2024
-
-**Astro 5** — Content Layer, Server Islands
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color violet -->
-### 2026
-
-Acquired by **Cloudflare**, stays open source
+```mermaid
+%%{init: {"themeVariables": {"fontSize": "14px", "cScale0": "#4c1d95", "cScaleLabel0": "#ffffff", "cScale1": "#4c1d95", "cScaleLabel1": "#ffffff", "cScale2": "#4c1d95", "cScaleLabel2": "#ffffff", "cScale3": "#4c1d95", "cScaleLabel3": "#ffffff"}}}%%
+timeline
+  2021 : Started by Fred K. Schott and the Snowpack team
+  2022 : Astro 1.0 : Islands architecture
+  2024 : Astro 5 : Content Layer, Server Islands
+  2026 : Acquired by Cloudflare, stays open source
+```
 
 <!-- @note -->
 > Astro came from the team behind the Snowpack build tool, with the realization that most websites are mainly content, yet we ship them as full SPAs. Astro made the Islands architecture popular. In January 2026 Cloudflare acquired the company behind Astro; the project remains MIT-licensed and open.

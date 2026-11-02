@@ -170,45 +170,23 @@ Angular
 
 <!-- @slide React története -->
 <!-- @slide-theme slate cyan sky -->
-<!-- @layout AAAA/BCDE/BCDE -->
+<!-- @layout A/B/B/B/B/B collapse -->
 
+<!-- @scale 80% -->
 # React — rövid történet
 
 ***
 
-<!-- @set-scale 85% -->
+<!-- @contain -->
 
-<!-- @color cyan -->
-### 2011–2013
-
-Jordan Walke, Facebook — 2013: open source
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color cyan -->
-### 2015
-
-**React Native** — ugyanaz a modell mobilon
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color cyan -->
-### 2019
-
-**Hookok** (React 16.8) — osztályok helyett függvények
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color cyan -->
-### 2024–2025
-
-**React 19**, Server Components, **React Compiler**
+```mermaid
+%%{init: {"themeVariables": {"fontSize": "14px", "cScale0": "#164e63", "cScaleLabel0": "#ffffff", "cScale1": "#164e63", "cScaleLabel1": "#ffffff", "cScale2": "#164e63", "cScaleLabel2": "#ffffff", "cScale3": "#164e63", "cScaleLabel3": "#ffffff"}}}%%
+timeline
+  2011–2013 : Jordan Walke, Facebook : open source 2013-ban
+  2015 : React Native : ugyanaz a modell mobilon
+  2019 : Hookok (React 16.8) : osztályok helyett függvények
+  2024–2025 : React 19, Server Components, React Compiler
+```
 
 <!-- @note -->
 > A React a Facebook hírfolyamának problémájára született: túl bonyolult volt kézzel szinkronban tartani a DOM-ot az adatokkal. Az első bemutatáskor a JSX miatt sokan kinevették — „HTML a JavaScriptben?” —, ma ez az iparági standard. A Hookok 2019-ben teljesen átalakították a React kód írását, a Server Components pedig a szerver felé tolja a hangsúlyt.
@@ -285,45 +263,23 @@ export function Counter() {
 
 <!-- @slide Angular története -->
 <!-- @slide-theme slate red rose -->
-<!-- @layout AAAA/BCDE/BCDE -->
+<!-- @layout A/B/B/B/B/B collapse -->
 
+<!-- @scale 80% -->
 # Angular — rövid történet
 
 ***
 
-<!-- @set-scale 85% -->
+<!-- @contain -->
 
-<!-- @color red -->
-### 2010
-
-**AngularJS** (Google) — kétirányú adatkötés
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color red -->
-### 2016
-
-**Angular 2** — teljes újraírás TypeScriptben
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color red -->
-### 2022–2023
-
-Standalone komponensek, **Signals**, új control flow
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color red -->
-### 2025
-
-**Zoneless** alapértelmezés, modern, könnyebb Angular
+```mermaid
+%%{init: {"themeVariables": {"fontSize": "14px", "cScale0": "#7f1d1d", "cScaleLabel0": "#ffffff", "cScale1": "#7f1d1d", "cScaleLabel1": "#ffffff", "cScale2": "#7f1d1d", "cScaleLabel2": "#ffffff", "cScale3": "#7f1d1d", "cScaleLabel3": "#ffffff"}}}%%
+timeline
+  2010 : AngularJS (Google) : kétirányú adatkötés
+  2016 : Angular 2 : teljes újraírás TypeScriptben
+  2022–2023 : Standalone komponensek, Signals, új control flow
+  2025 : Zoneless alapértelmezés, modern, könnyebb Angular
+```
 
 <!-- @note -->
 > Az AngularJS 2010-ben hatalmas siker volt, de a kétirányú adatkötés nagy alkalmazásoknál lassúnak bizonyult. Az Angular 2 ezért teljes újraírás lett, ami sok csapatot elriasztott — ez segítette a React és a Vue felemelkedését. 2023 óta beszélnek „Angular reneszánszról”: signals, új template szintaxis, új dokumentáció (angular.dev), és búcsú a Zone.js-től.
@@ -403,45 +359,23 @@ export class Counter {
 
 <!-- @slide Vue története -->
 <!-- @slide-theme slate emerald green -->
-<!-- @layout AAAA/BCDE/BCDE -->
+<!-- @layout A/B/B/B/B/B collapse -->
 
+<!-- @scale 80% -->
 # Vue — rövid történet
 
 ***
 
-<!-- @set-scale 85% -->
+<!-- @contain -->
 
-<!-- @color emerald -->
-### 2014
-
-Evan You (ex-Google, AngularJS) mellékprojektje
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color emerald -->
-### 2016
-
-**Vue 2** — Virtual DOM, robbanásszerű népszerűség
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color emerald -->
-### 2020
-
-**Vue 3** — Composition API, Proxy-reaktivitás
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color emerald -->
-### 2025
-
-**Vapor Mode** — Virtual DOM nélküli fordítás
+```mermaid
+%%{init: {"themeVariables": {"fontSize": "14px", "cScale0": "#064e3b", "cScaleLabel0": "#ffffff", "cScale1": "#064e3b", "cScaleLabel1": "#ffffff", "cScale2": "#064e3b", "cScaleLabel2": "#ffffff", "cScale3": "#064e3b", "cScaleLabel3": "#ffffff"}}}%%
+timeline
+  2014 : Evan You (ex-Google, AngularJS) mellékprojektje
+  2016 : Vue 2 : Virtual DOM, robbanásszerű népszerűség
+  2020 : Vue 3 : Composition API, Proxy-reaktivitás
+  2025 : Vapor Mode : Virtual DOM nélküli fordítás
+```
 
 <!-- @note -->
 > Evan You az AngularJS-en dolgozott a Google-nél, és azt akarta megtartani belőle, ami jó volt — a template-eket és a reaktivitást —, a nehézkes részek nélkül. A Vue nem nagyvállalati háttérrel, hanem közösségi finanszírozással nőtt nagyra, különösen Ázsiában és a Laravel közösségben. A Vue 3 átállás fájdalmas volt, de ma már stabil alap.
@@ -543,45 +477,23 @@ const count = ref(0);
 
 <!-- @slide Svelte története -->
 <!-- @slide-theme stone orange orange -->
-<!-- @layout AAAA/BCDE/BCDE -->
+<!-- @layout A/B/B/B/B/B collapse -->
 
+<!-- @scale 80% -->
 # Svelte — rövid történet
 
 ***
 
-<!-- @set-scale 85% -->
+<!-- @contain -->
 
-<!-- @color orange -->
-### 2016
-
-Rich Harris (The Guardian) — „a framework, ami eltűnik”
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color orange -->
-### 2019
-
-**Svelte 3** — „Rethinking reactivity”
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color orange -->
-### 2022
-
-**SvelteKit 1.0** — hivatalos meta-framework
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color orange -->
-### 2024
-
-**Svelte 5** — runes, explicit reaktivitás
+```mermaid
+%%{init: {"themeVariables": {"fontSize": "14px", "cScale0": "#7c2d12", "cScaleLabel0": "#ffffff", "cScale1": "#7c2d12", "cScaleLabel1": "#ffffff", "cScale2": "#7c2d12", "cScaleLabel2": "#ffffff", "cScale3": "#7c2d12", "cScaleLabel3": "#ffffff"}}}%%
+timeline
+  2016 : Rich Harris (The Guardian) : „a framework, ami eltűnik”
+  2019 : Svelte 3 : „Rethinking reactivity”
+  2022 : SvelteKit 1.0 : hivatalos meta-framework
+  2024 : Svelte 5 : runes, explicit reaktivitás
+```
 
 <!-- @note -->
 > Rich Harris hírgrafikus volt a The Guardiannél, ahol a gyors, könnyű interaktív grafikákhoz kellett eszköz. Az ötlet: a framework ne a böngészőben fusson, hanem **fordításkor** dolgozzon, és tűnjön el. A Svelte 3 „Rethinking reactivity” előadása legendás lett. 2021 óta Rich Harris a Vercelnél főállásban fejleszti a Svelte-et.
@@ -654,45 +566,23 @@ Rich Harris (The Guardian) — „a framework, ami eltűnik”
 
 <!-- @slide Astro története -->
 <!-- @slide-theme zinc violet fuchsia -->
-<!-- @layout AAAA/BCDE/BCDE -->
+<!-- @layout A/B/B/B/B/B collapse -->
 
+<!-- @scale 80% -->
 # Astro — rövid történet
 
 ***
 
-<!-- @set-scale 85% -->
+<!-- @contain -->
 
-<!-- @color violet -->
-### 2021
-
-Fred K. Schott és a Snowpack csapata indítja
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color violet -->
-### 2022
-
-**Astro 1.0** — Islands architektúra
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color violet -->
-### 2024
-
-**Astro 5** — Content Layer, Server Islands
-
-***
-
-<!-- @set-scale 85% -->
-
-<!-- @color violet -->
-### 2026
-
-A **Cloudflare** felvásárolja, open source marad
+```mermaid
+%%{init: {"themeVariables": {"fontSize": "14px", "cScale0": "#4c1d95", "cScaleLabel0": "#ffffff", "cScale1": "#4c1d95", "cScaleLabel1": "#ffffff", "cScale2": "#4c1d95", "cScaleLabel2": "#ffffff", "cScale3": "#4c1d95", "cScaleLabel3": "#ffffff"}}}%%
+timeline
+  2021 : Fred K. Schott és a Snowpack csapata indítja
+  2022 : Astro 1.0 : Islands architektúra
+  2024 : Astro 5 : Content Layer, Server Islands
+  2026 : A Cloudflare felvásárolja, open source marad
+```
 
 <!-- @note -->
 > Az Astro a Snowpack build eszköz csapatától indult, azzal a felismeréssel, hogy a legtöbb weboldal főleg tartalom, mégis teljes SPA-ként szállítjuk őket. Az Islands architektúrát az Astro tette ismertté. 2026 januárjában a Cloudflare megvásárolta az Astro mögötti céget; a projekt MIT licencű és nyílt marad.
