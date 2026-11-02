@@ -721,6 +721,33 @@ const posts = await getCollection("blog");
 
 ---
 
+<!-- @slide htmx in 100 seconds -->
+<!-- @slide-theme zinc blue sky -->
+
+<!-- @space -->
+
+# htmx in 100 seconds
+
+<!-- @space -->
+
+<!-- @note -->
+> Next: Fireship's two-minute summary of htmx.
+
+---
+
+<!-- @slide htmx video -->
+<!-- @slide-theme zinc blue sky -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[htmx in 100 seconds](https://www.youtube.com/watch?v=r-GSGH2RxJs)
+
+<!-- @note -->
+> Fireship's summary of htmx: HTML attributes send the request, the server returns an HTML fragment, and that goes into the DOM. No build step and no client-side state management.
+
+---
+
 <!-- @slide Comparison -->
 <!-- @slide-theme zinc violet zinc -->
 

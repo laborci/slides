@@ -721,6 +721,33 @@ const posts = await getCollection("blog");
 
 ---
 
+<!-- @slide htmx in 100 seconds -->
+<!-- @slide-theme zinc blue sky -->
+
+<!-- @space -->
+
+# htmx in 100 seconds
+
+<!-- @space -->
+
+<!-- @note -->
+> Következik a Fireship kb. kétperces összefoglalója: htmx.
+
+---
+
+<!-- @slide htmx videó -->
+<!-- @slide-theme zinc blue sky -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[htmx in 100 seconds](https://www.youtube.com/watch?v=r-GSGH2RxJs)
+
+<!-- @note -->
+> Fireship összefoglalója a htmx-ről: HTML attribútumokkal küldünk kérést, a szerver HTML-részletet ad vissza, és az kerül a DOM-ba. Nincs build lépés és nincs kliensoldali állapotkezelés.
+
+---
+
 <!-- @slide Összehasonlítás -->
 <!-- @slide-theme zinc violet zinc -->
 
