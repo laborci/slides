@@ -280,6 +280,19 @@ HTTP/1.1 200 OK
 
 ---
 
+<!-- @slide CORS in 100 Seconds videó -->
+<!-- @slide-theme zinc amber zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[CORS in 100 Seconds](https://www.youtube.com/watch?v=4KHiSt0oLJ0)
+
+<!-- @note -->
+> Fireship, kb. 2,5 perc: a same-origin policy, az Access-Control-Allow-Origin fejléc és a preflight egyben. Jó ismétlés a két CORS-dia után.
+
+---
+
 <!-- @slide Preflight és clickjacking -->
 <!-- @slide-theme zinc amber zinc -->
 <!-- @grid AB -->
@@ -421,6 +434,19 @@ Ha HTML kell: **ismert** tisztító könyvtár engedélyezőlistával. Saját sz
 
 <!-- @note -->
 > Alapszabály: a felhasználótól érkező szöveget szövegként illeszd be; ha HTML kell, tisztítsd ismert könyvtárral; a CSP-t tartalékként add hozzá. Tároláskor azért nem kódolunk, mert akkor még nem tudjuk, hol jelenik meg: ugyanaz a hozzászólás megy HTML-ben, JSON-ban a mobilappnak és e-mailben is. A nonce válaszonként új véletlen érték, ugyanaz a fejlécben és a saját script elemekben; a CSP a HTML-be írt eseménykezelőket és a `javascript:` címeket is tiltja. A CSP nem pótolja a kódolást. Újabb réteg a Trusted Types, korlátozott támogatással.
+
+---
+
+<!-- @slide Cross-Site Scripting (XSS): What It Is, How It Works and How to Prevent It videó -->
+<!-- @slide-theme zinc violet zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[Cross-Site Scripting (XSS): What It Is, How It Works and How to Prevent It](https://www.youtube.com/watch?v=H_-8GM6hsN0)
+
+<!-- @note -->
+> Database Dive, kb. 3 perc: az XSS működése és a megelőzés (kódolás, tisztítás, CSP). Az előző diák összefoglalása animációval.
 
 ---
 
@@ -598,6 +624,19 @@ Bemenet: `x' OR '1'='1`
 
 ---
 
+<!-- @slide Hacking Websites with SQL Injection videó -->
+<!-- @slide-theme zinc emerald zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[Hacking Websites with SQL Injection](https://www.youtube.com/watch?v=_jKylhJtPmI)
+
+<!-- @note -->
+> Computerphile, kb. 9 perc: egy sérülékeny oldal SQL-injekcióval, és az alapvető védekezés. Órán részletekben, vagy otthoni nézésre.
+
+---
+
 <!-- @slide Más értelmezők -->
 <!-- @slide-theme zinc emerald zinc -->
 <!-- @grid AB -->
@@ -665,6 +704,19 @@ scrypt (N=2^17, r=8, p=1):
 
 <!-- @note -->
 > A belépés egy lánc, a leggyengébb láncszemén szakad el. Olvasható jelszót tárolni tilos; a hash egyirányú (1.6), de a támadó a gyakori jelszavak lenyomatával találgathat, és a gyors hash ebben neki kedvez. A mérés egy processzormagon készült. Minimum paraméterek: Argon2id 19 MiB / 2 iteráció; scrypt N=2^17; bcrypt munkatényező 10 (72 bájt felett levág); PBKDF2-HMAC-SHA256 600 000 iteráció. A salt egyedi véletlen érték, nem titok: azonos jelszavakhoz is különböző lenyomatot ad, és használhatatlanná teszi az előre kiszámolt táblákat. Saját eljárást írni soha.
+
+---
+
+<!-- @slide How NOT to Store Passwords! videó -->
+<!-- @slide-theme zinc cyan zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[How NOT to Store Passwords!](https://www.youtube.com/watch?v=8ZtInClXe1Q)
+
+<!-- @note -->
+> Computerphile, kb. 9,5 perc: olvasható jelszó, titkosítás, gyors hash, salt — miért rossz az első három, és mi a helyes út. Kiegészíti a lassú hash mérését.
 
 ---
 
