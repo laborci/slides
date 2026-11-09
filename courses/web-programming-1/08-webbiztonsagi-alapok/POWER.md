@@ -131,36 +131,50 @@ OWASP-szemlélet és biztonsági áttekintés
 
 <!-- @slide Bizalmi határ -->
 <!-- @slide-theme zinc sky zinc -->
-<!-- @layout ABB -->
+<!-- @grid AAA/BBB/CDE/CDE collapse -->
 
-<!-- @color sky -->
-## 8.1
-
-# Bizalmi határ
-
-<!-- @set-scale 80% -->
-<!-- @set-align left -->
-
-- Az adat **másik félhez** vagy **értelmezőhöz** kerül
-- A kérést **bárki** módosíthatja (curl, 2.3)
-
-```http
-POST /jelentkezesek
-{"kurzus":"webprog",
- "hallgatoId":"anne"}
-```
+<!-- @scale 80% -->
+# Bizalmi határ: *ki állítja ezt, és miért hinnék neki?*
 
 ***
 
 <!-- @contain -->
 
 ```mermaid
+%%{init: {"themeVariables": {"fontSize": "14px"}}}%%
 flowchart LR
-    U[Felhasználó vagy támadó] --> B[Böngésző és bemenet]
-    B -->|HTTP-kérés| S[Webalkalmazás]
-    S -->|lekérdezés: 8.5| D[(Adatbázis)]
-    S -->|HTML: 8.3| B
+    U[Felhasználó vagy támadó] --> B[Böngésző]
+    B -->|"① HTTP-kérés"| S[Webalkalmazás]
+    S -->|"② SQL-lekérdezés"| D[(Adatbázis)]
+    S -->|"③ HTML-válasz"| B
 ```
+
+***
+
+<!-- @set-scale 85% -->
+
+<!-- @color sky -->
+### ① Böngésző → szerver
+
+A `hallgatoId`-t **bárki** átírhatja → a kilét a **munkamenetből** jön (7.4)
+
+***
+
+<!-- @set-scale 85% -->
+
+<!-- @color sky -->
+### ② Szerver → adatbázis
+
+A bemenet **utasítássá** válhat → injekció (8.5)
+
+***
+
+<!-- @set-scale 85% -->
+
+<!-- @color sky -->
+### ③ Szerver → böngésző
+
+A szöveg **kóddá** válhat → XSS (8.3)
 
 <!-- @note -->
 > Kulcskérdés minden határon: ki állítja ezt, és miért hinnék neki? C-ből ismerős: a `scanf`-fel beolvasott bemenet bizalmi határon lép át, ellenőrzés nélkül túlírhatja a puffert. A weben a legfontosabb határ a böngésző és a szerver között van. A `hallgatoId` mezőt bárki átírhatja, ezért a szerver a hallgató kilétét a saját munkamenetéből veszi (7.2, 7.4). A másik két határon ugyanaz a veszély: ami adat kellene legyen, utasításként értelmeződik — erről szól az XSS és az injekció. A határ nem azt jelenti, hogy a másik fél rosszindulatú, csak azt, hogy nem hagyatkozhatunk az állítására.
