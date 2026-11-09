@@ -73,7 +73,8 @@ No Chrome or Node available (e.g. a sandbox without a browser)? Say so. Keep the
 - **Opening:**
   - Start with a title slide.
   - No agenda slide unless asked.
-  - Course chapters get a section divider slide per subchapter, each section with its own accent colour (`@slide-theme <base> <accent> <frame>`).
+  - **Length:** a course chapter fits in **20–30 slides**. Don't give each subchapter its own divider slide; put a small `## 8.x` label at the top of the slide instead. Use one shared misconceptions slide per chapter, not one per subchapter, and move detail into the notes.
+  - Each subchapter gets its own accent colour (`@slide-theme <base> <accent> <frame>`).
 - **Content:**
   - One idea per panel.
   - 3–6 short bullets, not paragraphs.
