@@ -6,6 +6,7 @@
 courses/
   web-programming-1/
     07-allapot-identitas-hozzaferes/POWER.md   7. fejezet: Állapot, identitás és hozzáférés
+    08-webbiztonsagi-alapok/POWER.md           8. fejezet: Webbiztonsági alapok
     frontend-frameworks/POWER.md               Frontend keretrendszerek és renderelési stratégiák
     frontend-frameworks-en/POWER.md            Frontend frameworks and rendering strategies
 tools/
