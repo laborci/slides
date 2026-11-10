@@ -579,6 +579,19 @@ sequenceDiagram
 
 ---
 
+<!-- @slide Cross Site Request Forgery (CSRF) — OWASP Top 10 Explainer video -->
+<!-- @slide-theme zinc rose zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[Cross Site Request Forgery (CSRF) — OWASP Top 10 Explainer](https://www.youtube.com/watch?v=Rm1GoSYqaUA)
+
+<!-- @note -->
+> Secure Code Warrior, about 4 minutes: an animated summary of CSRF and its defences (token, SameSite).
+
+---
+
 <!-- @slide Concatenated vs parameterised -->
 <!-- @slide-theme zinc emerald zinc -->
 
@@ -609,6 +622,19 @@ Input: `x' OR '1'='1`
 
 <!-- @note -->
 > The essence of injection is mixing code and data — the same mistake as XSS, only here the interpreter is the database. With normal input (`42`) both versions return the same, which is why it's sneaky: nothing reveals it in everyday use. Just as multiplication binds tighter than addition, in SQL AND binds tighter than OR. An even more targeted input: `x' OR public = 0 --` — the `--` starts a comment, and it asks specifically for the non-public products. The parameterised version looks for a product whose ID is literally that text. Tried out with SQLite under Node.js 24.
+
+---
+
+<!-- @slide What are SQL Injections? Explained in 180 seconds video -->
+<!-- @slide-theme zinc emerald zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[What are SQL Injections? Explained in 180 seconds](https://www.youtube.com/watch?v=O9Yye537soM)
+
+<!-- @note -->
+> Cybr, about 4 minutes: static vs dynamic queries, untrusted input, and the defences. A short recap of the previous slide.
 
 ---
 
@@ -767,6 +793,32 @@ scrypt (N=2^17, r=8, p=1):
 
 ---
 
+<!-- @slide Make Your Accounts Safer with Multifactor Authentication (MFA) video -->
+<!-- @slide-theme zinc cyan zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[Make Your Accounts Safer with Multifactor Authentication (MFA)](https://www.youtube.com/watch?v=XIlF2qkav5c)
+
+<!-- @note -->
+> CISA (the US cybersecurity agency), about 1.5 minutes: what MFA is and why it lowers the value of a stolen password. From the user's point of view.
+
+---
+
+<!-- @slide Understand passkeys in 4 minutes video -->
+<!-- @slide-theme zinc cyan zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[Understand passkeys in 4 minutes](https://www.youtube.com/watch?v=2xdV-xut7EQ)
+
+<!-- @note -->
+> Chrome for Developers, about 4 minutes: how passkeys work and why they resist phishing. It expands the right half of the MFA slide.
+
+---
+
 <!-- @slide Session -->
 <!-- @slide-theme zinc cyan zinc -->
 
@@ -786,6 +838,19 @@ scrypt (N=2^17, r=8, p=1):
 
 <!-- @note -->
 > Session fixation: if the server kept the pre-login ID, an attacker could force an ID they know onto the user in advance and use it after the user logs in. The three cookie attributes act against separate risks; a token kept in localStorage can be read during XSS (7.3). Sensitive systems need shorter idle timeouts and re-authentication before changing the password; NIST assigns different time limits to different assurance levels.
+
+---
+
+<!-- @slide Session vs Token Authentication in 100 Seconds video -->
+<!-- @slide-theme zinc cyan zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[Session vs Token Authentication in 100 Seconds](https://www.youtube.com/watch?v=UBUNrFtufWo)
+
+<!-- @note -->
+> Fireship, about 2 minutes: server-side sessions in a cookie versus token-based authentication (JWT). A recap from chapter 7, as background to session protection.
 
 ---
 

@@ -579,6 +579,19 @@ sequenceDiagram
 
 ---
 
+<!-- @slide Cross Site Request Forgery (CSRF) — OWASP Top 10 Explainer videó -->
+<!-- @slide-theme zinc rose zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[Cross Site Request Forgery (CSRF) — OWASP Top 10 Explainer](https://www.youtube.com/watch?v=Rm1GoSYqaUA)
+
+<!-- @note -->
+> Secure Code Warrior, kb. 4 perc: animált összefoglaló a CSRF-ről és a védelmekről (token, SameSite).
+
+---
+
 <!-- @slide Összefűzött és paraméterezett -->
 <!-- @slide-theme zinc emerald zinc -->
 
@@ -609,6 +622,19 @@ Bemenet: `x' OR '1'='1`
 
 <!-- @note -->
 > Az injekció lényege a kód és az adat összekeveredése — ugyanaz a hiba, mint az XSS, csak itt az értelmező az adatbázis. Normál bemenetnél (`42`) mindkét változat ugyanazt adja, ezért alattomos: hétköznapi használatnál semmi sem jelzi. Ahogy a matematikában a szorzás erősebben köt az összeadásnál, az SQL-ben az AND erősebben köt az OR-nál. Még célzottabb bemenet: `x' OR nyilvanos = 0 --` — a `--` megjegyzést kezd, és kifejezetten a nem nyilvános termékeket kéri le. A paraméterezett változat olyan terméket keres, aminek ez szó szerint az azonosítója. A kipróbálás SQLite-tal, Node.js 24 alatt készült.
+
+---
+
+<!-- @slide What are SQL Injections? Explained in 180 seconds videó -->
+<!-- @slide-theme zinc emerald zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[What are SQL Injections? Explained in 180 seconds](https://www.youtube.com/watch?v=O9Yye537soM)
+
+<!-- @note -->
+> Cybr, kb. 4 perc: statikus és dinamikus lekérdezés, megbízhatatlan bemenet, és a védekezés. Rövid ismétlés az előző diához.
 
 ---
 
@@ -768,6 +794,32 @@ scrypt (N=2^17, r=8, p=1):
 
 ---
 
+<!-- @slide Make Your Accounts Safer with Multifactor Authentication (MFA) videó -->
+<!-- @slide-theme zinc cyan zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[Make Your Accounts Safer with Multifactor Authentication (MFA)](https://www.youtube.com/watch?v=XIlF2qkav5c)
+
+<!-- @note -->
+> CISA (az USA kiberbiztonsági ügynöksége), kb. 1,5 perc: mi az MFA, és miért csökkenti egy ellopott jelszó értékét. Felhasználói nézőpontból.
+
+---
+
+<!-- @slide Understand passkeys in 4 minutes videó -->
+<!-- @slide-theme zinc cyan zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[Understand passkeys in 4 minutes](https://www.youtube.com/watch?v=2xdV-xut7EQ)
+
+<!-- @note -->
+> Chrome for Developers, kb. 4 perc: hogyan működik a passkey, és miért áll ellen az adathalászatnak. Az MFA-dia jobb oldalát mutatja be.
+
+---
+
 <!-- @slide Munkamenet -->
 <!-- @slide-theme zinc cyan zinc -->
 
@@ -787,6 +839,19 @@ scrypt (N=2^17, r=8, p=1):
 
 <!-- @note -->
 > Session fixation: ha a szerver megtartaná a belépés előtti azonosítót, a támadó előre ráerőltethetne egy általa ismert azonosítót a felhasználóra, és a belépés után azzal lépne be. A három cookie-attribútum külön kockázat ellen hat; a localStorage-ban tartott token XSS-nél kiolvasható (7.3). Érzékeny rendszerben rövidebb tétlenségi idő és jelszócsere előtt újbóli hitelesítés kell; a NIST az érzékenységi szintekhez különböző időkorlátokat rendel.
+
+---
+
+<!-- @slide Session vs Token Authentication in 100 Seconds videó -->
+<!-- @slide-theme zinc cyan zinc -->
+
+<!-- @cover -->
+
+<!-- @youtube -->
+[Session vs Token Authentication in 100 Seconds](https://www.youtube.com/watch?v=UBUNrFtufWo)
+
+<!-- @note -->
+> Fireship, kb. 2 perc: szerveroldali munkamenet cookie-ban és token alapú hitelesítés (JWT). Ismétlés a 7. fejezetből, a munkamenet-védelem hátteréhez.
 
 ---
 
