@@ -80,6 +80,7 @@ No Chrome or Node available (e.g. a sandbox without a browser)? Say so. Keep the
   - 3–6 short bullets, not paragraphs.
   - Prefer a table or a two-panel comparison over a wall of text.
   - Use `@reveal` for a punchline or a question.
+- **Examples:** keep them generic, and use them only when they help. Use a web app, users, products or orders, `userId`, `app.example`, Alice. Don't copy the course material's own scenario (student data, course registration, `hallgatoId`, Kurzuspont). Presenter notes may still talk to the audience about "the students".
 - **Facts:** check anything recent (versions, acquisitions, release years) on the web before stating it.
 
 ## Sizing notes (learned the hard way)

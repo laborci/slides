@@ -16,7 +16,7 @@ code-scale: 70%
 Mit védünk, kitől, és hol lép át az adat olyan határt, ahol már nem bízhatunk benne?
 
 <!-- @note -->
-> A fejezet a gondolkodásmóddal kezd, nem a támadások listájával. Utána a böngésző elkülönítési szabályai jönnek (same-origin policy, CORS), majd a három nagy támadáscsalád: XSS, CSRF, injekció. Végül a jelszavak, az MFA és a munkamenetek védelme, és egy OWASP-szemléletű áttekintés. Minden példa a Kurzuspontra épül.
+> A fejezet a gondolkodásmóddal kezd, nem a támadások listájával. Utána a böngésző elkülönítési szabályai jönnek (same-origin policy, CORS), majd a három nagy támadáscsalád: XSS, CSRF, injekció. Végül a jelszavak, az MFA és a munkamenetek védelme, és egy OWASP-szemléletű áttekintés. A példák általános webalkalmazásra épülnek.
 
 ---
 
@@ -107,8 +107,8 @@ OWASP-szemlélet és biztonsági áttekintés
 
 <!-- @set-align left -->
 
-- A hallgatók **személyes adatai**
-- A jelentkezések **helyessége**
+- A felhasználók **személyes adatai**
+- A műveletek **helyessége**
 - A bejelentkezett **munkamenetek**
 - A szolgáltatás **elérhetősége**
 
@@ -120,7 +120,7 @@ OWASP-szemlélet és biztonsági áttekintés
 <!-- @set-align left -->
 
 - Névtelen látogató
-- **Másik bejelentkezett** hallgató
+- **Másik bejelentkezett** felhasználó
 - Rosszindulatú oldal egy **másik fülön**
 - Valaki **ellopott jelszóval**
 
@@ -156,7 +156,7 @@ flowchart LR
 <!-- @color sky -->
 ### ① Böngésző → szerver
 
-A `hallgatoId`-t **bárki** átírhatja → a kilét a **munkamenetből** jön (7.4)
+A `userId`-t **bárki** átírhatja → a kilét a **munkamenetből** jön (7.4)
 
 ***
 
@@ -177,27 +177,27 @@ A bemenet **utasítássá** válhat → injekció (8.5)
 A szöveg **kóddá** válhat → XSS (8.3)
 
 <!-- @note -->
-> Kulcskérdés minden határon: ki állítja ezt, és miért hinnék neki? C-ből ismerős: a `scanf`-fel beolvasott bemenet bizalmi határon lép át, ellenőrzés nélkül túlírhatja a puffert. A weben a legfontosabb határ a böngésző és a szerver között van. A `hallgatoId` mezőt bárki átírhatja, ezért a szerver a hallgató kilétét a saját munkamenetéből veszi (7.2, 7.4). A másik két határon ugyanaz a veszély: ami adat kellene legyen, utasításként értelmeződik — erről szól az XSS és az injekció. A határ nem azt jelenti, hogy a másik fél rosszindulatú, csak azt, hogy nem hagyatkozhatunk az állítására.
+> Kulcskérdés minden határon: ki állítja ezt, és miért hinnék neki? C-ből ismerős: a `scanf`-fel beolvasott bemenet bizalmi határon lép át, ellenőrzés nélkül túlírhatja a puffert. A weben a legfontosabb határ a böngésző és a szerver között van. A `userId` mezőt bárki átírhatja, ezért a szerver a felhasználó kilétét a saját munkamenetéből veszi (7.2, 7.4). A másik két határon ugyanaz a veszély: ami adat kellene legyen, utasításként értelmeződik — erről szól az XSS és az injekció. A határ nem azt jelenti, hogy a másik fél rosszindulatú, csak azt, hogy nem hagyatkozhatunk az állítására.
 
 ---
 
-<!-- @slide Kurzuspont fenyegetési táblázata -->
+<!-- @slide Fenyegetési táblázat -->
 <!-- @slide-theme zinc sky zinc -->
 
-# A Kurzuspont fenyegetési táblázata
+# Egy webalkalmazás fenyegetési táblázata
 
 <!-- @set-scale 65% -->
 
 | Érték | Támadó | Fenyegetés | Fő védelem | Lecke |
 | --- | --- | --- | --- | --- |
-| Személyes adatok | Másik hallgató | Átírt azonosítóval más adatát olvassa | Szerveroldali jogosultság | 7.4 |
-| Jelentkezések | Idegen weboldal | A böngészővel kérést küldet | CSRF-védelem | 8.4 |
+| Személyes adatok | Másik felhasználó | Átírt azonosítóval más adatát olvassa | Szerveroldali jogosultság | 7.4 |
+| Fiókműveletek | Idegen weboldal | A böngészővel kérést küldet | CSRF-védelem | 8.4 |
 | Hozzászólások | Rosszindulatú hozzászóló | Programkódot juttat az oldalba | Kimeneti kódolás | 8.3 |
 | Adatbázis | Bármely látogató | A bemenete utasítássá válik | Paraméterezett lekérdezés | 8.5 |
 | Fiókok | Jelszótippelő, adathalász | Átveszi a fiókot | Jelszóvédelem, MFA | 8.6 |
 
 <!-- @note -->
-> Egy vázlat, nem teljes elemzés, de egyben a fejezet térképe: minden sor egy későbbi leckére mutat. A callouthoz példa: a HTTPS megvédi a kérést a Wi-Fin hallgatózótól, de nem dönti el, hogy a hallgató jelentkezhet-e. A bejelentkezés igazolja, hogy a kérés Anne cookie-jával jött, de nem azt, hogy Anne szándékából indult. A védelmek felsorolása után mindig meg kell kérdezni: maradt-e rés?
+> Egy vázlat, nem teljes elemzés, de egyben a fejezet térképe: minden sor egy későbbi leckére mutat. Egyik védelem sem váltja ki a másikat: a HTTPS megvédi a kérést a Wi-Fin hallgatózótól, de nem dönti el, hogy a felhasználó jogosult-e a műveletre. A bejelentkezés igazolja, hogy a kérés Alice cookie-jával jött, de nem azt, hogy Alice szándékából indult. A védelmek felsorolása után mindig meg kell kérdezni: maradt-e rés?
 
 ---
 
@@ -222,7 +222,7 @@ A szöveg **kóddá** válhat → XSS (8.3)
 | `http://news.company.com/dir/page.html` | ❌ nem | más a hosztnév |
 
 <!-- @note -->
-> Miért kell? Két fül egy böngészőben: az egyiken a bejelentkezett Kurzuspont, a másikon egy ismeretlen oldal. A böngésző a cookie-t a kérés célja szerint csatolja (7.2), tehát ha az idegen oldal elolvashatná a Kurzuspont válaszait, kiolvasná a hallgató adatait. Ezt tiltja a same-origin policy, talán a böngésző legfontosabb biztonsági szabálya. Az útvonal nem része az eredetnek, egy aldomain viszont már más eredet. A cookie-k régebbi, más szabályokat követnek; a localStorage eredetenként különül el (3.6).
+> Miért kell? Két fül egy böngészőben: az egyiken egy webalkalmazás, ahová be vagyunk jelentkezve, a másikon egy ismeretlen oldal. A böngésző a cookie-t a kérés célja szerint csatolja (7.2), tehát ha az idegen oldal elolvashatná az alkalmazás válaszait, kiolvasná a felhasználó adatait. Ezt tiltja a same-origin policy, talán a böngésző legfontosabb biztonsági szabálya. Az útvonal nem része az eredetnek, egy aldomain viszont már más eredet. A cookie-k régebbi, más szabályokat követnek; a localStorage eredetenként különül el (3.6).
 
 ---
 
@@ -250,7 +250,7 @@ A szöveg **kóddá** válhat → XSS (8.3)
 - A kérés **elmegy**, mellékhatása lehet — csak az eredmény nem olvasható
 
 <!-- @note -->
-> Fontos különbség: a same-origin policy nem azt mondja, hogy nem indulhat kérés egy másik eredet felé, hanem hogy a küldő oldal programja nem olvashatja a választ. A kérés eljut a szerverhez, és akár egy lemondás is megtörténhet — ezt a rést használja ki a CSRF (8.4). Hogy miért engedi a böngésző? Mert enélkül nem működnének a linkek, a más oldalra küldött űrlapok és a CDN-ről betöltött programok.
+> Fontos különbség: a same-origin policy nem azt mondja, hogy nem indulhat kérés egy másik eredet felé, hanem hogy a küldő oldal programja nem olvashatja a választ. A kérés eljut a szerverhez, és akár egy módosítás is megtörténhet — ezt a rést használja ki a CSRF (8.4). Hogy miért engedi a böngésző? Mert enélkül nem működnének a linkek, a más oldalra küldött űrlapok és a CDN-ről betöltött programok.
 
 ---
 
@@ -265,7 +265,7 @@ A szöveg **kóddá** válhat → XSS (8.3)
 
 <!-- @set-align left -->
 
-- `kurzuspont.example` → `api.kurzuspont.example`: **más eredet**
+- `app.example` → `api.app.example`: **más eredet**
 - Böngésző: `Origin` fejléc
 - Szerver: `Access-Control-Allow-Origin`
 - ⚠️ A curl ugyanazt a törzset kapja: **nem hozzáférés-védelem**
@@ -276,17 +276,17 @@ A szöveg **kóddá** válhat → XSS (8.3)
 
 ```http
 $ curl -i …/api -H 'Origin:
-    https://kurzuspont.example'
+    https://app.example'
 HTTP/1.1 200 OK
 Vary: Origin
 Access-Control-Allow-Origin:
-  https://kurzuspont.example
-{"kurzusok":["webprog"]}
+  https://app.example
+{"products":["…"]}
 
 $ curl -i …/api -H 'Origin:
     https://idegen.example'
 HTTP/1.1 200 OK
-{"kurzusok":["webprog"]}
+{"products":["…"]}
 ```
 
 <!-- @note -->
@@ -327,8 +327,8 @@ HTTP/1.1 200 OK
 
 <!-- @set-align left -->
 
-- **Láthatatlan keretben** a Kurzuspont, fölötte csali gomb
-- A kattintás a valódi lemondásra megy
+- **Láthatatlan keretben** a valódi oldal, fölötte csali gomb
+- A kattintás a valódi „Fiók törlése” gombra megy
 
 ```http
 Content-Security-Policy:
@@ -354,7 +354,7 @@ Content-Security-Policy:
 
 - Hozzászólás helyett **HTML és program**
 - A böngésző **lefuttatja** — mindenkinél
-- A Kurzuspont **saját eredetében** fut
+- A sérülékeny oldal **saját eredetében** fut
 
 ```c
 printf(szoveg);       // hibás
@@ -475,7 +475,7 @@ Ha HTML kell: **ismert** tisztító könyvtár engedélyezőlistával. Saját sz
 
 <!-- @set-align left -->
 
-A program a felhasználó nevében lemondhat, módosíthat, olvashat — bármit, amit ő maga megtehetne.
+A program a felhasználó nevében módosíthat, törölhet, olvashat — bármit, amit ő maga megtehetne.
 
 ***
 
@@ -493,7 +493,7 @@ A program a felhasználó nevében lemondhat, módosíthat, olvashat — bármit
 
 ---
 
-<!-- @slide Anne története -->
+<!-- @slide CSRF folyamat -->
 <!-- @slide-theme zinc rose zinc -->
 <!-- @layout AB -->
 
@@ -502,12 +502,13 @@ A program a felhasználó nevében lemondhat, módosíthat, olvashat — bármit
 
 # Kérés idegen oldal hatására
 
+<!-- @set-scale 90% -->
 <!-- @set-align left -->
 
-- Anne be van jelentkezve, megnyit egy **idegen oldalt**
-- Rejtett űrlap: `POST /lemondas`
-- A böngésző **csatolja** Anne cookie-ját
-- A szerver érvényes munkamenetet lát → **lemondja**
+- Alice be van jelentkezve, megnyit egy **idegen oldalt**
+- Rejtett űrlap: `POST /account/email`
+- A böngésző **csatolja** Alice cookie-ját
+- A szerver érvényes munkamenetet lát → **átírja**
 
 ***
 
@@ -517,15 +518,15 @@ A program a felhasználó nevében lemondhat, módosíthat, olvashat — bármit
 sequenceDiagram
     participant B as Böngésző
     participant I as Idegen oldal
-    participant K as Kurzus API
+    participant K as Alkalmazás API
     B->>I: Az idegen oldal megnyitása
     I->>B: Állapotváltoztató kérés kiváltása
-    B->>K: Kérés + Anne cookie-ja
+    B->>K: Kérés + Alice cookie-ja
     K-->>B: A művelet eredménye
 ```
 
 <!-- @note -->
-> CSRF = Cross-Site Request Forgery. Két korábbi szabály együtt nyitja a rést: a cookie a kérés célja szerint csatolódik (7.2), és a same-origin policy megengedi a más eredetre való írást (8.2). Három feltétel kell: állapotváltoztató HTTP-kérés, kizárólag cookie-alapú azonosítás, kitalálható paraméterek. A támadónak nem kell elolvasnia a választ — elég a mellékhatás. Anne erről semmit sem tud, ő csak megnyitott egy weboldalt.
+> CSRF = Cross-Site Request Forgery. Két korábbi szabály együtt nyitja a rést: a cookie a kérés célja szerint csatolódik (7.2), és a same-origin policy megengedi a más eredetre való írást (8.2). Három feltétel kell: állapotváltoztató HTTP-kérés, kizárólag cookie-alapú azonosítás, kitalálható paraméterek. A támadónak nem kell elolvasnia a választ — elég a mellékhatás. Alice erről semmit sem tud, ő csak megnyitott egy weboldalt; a támadó a saját e-mail-címét állítja be, és utána jelszó-visszaállítással átveszi a fiókot.
 
 ---
 
@@ -541,7 +542,7 @@ sequenceDiagram
 
 | Védelem a szerveren | Idegen oldalról | Saját oldalról |
 | --- | --- | --- |
-| Nincs (csak cookie) | **200**: „a jelentkezés lemondva anne nevében” | 200 |
+| Nincs (csak cookie) | **200**: „e-mail-cím módosítva alice nevében” | 200 |
 | CSRF-token (`X-CSRF-Token`) | **403**: „hiányzó vagy hibás CSRF-token” | 200 |
 | Fetch metadata (`Sec-Fetch-Site`) | **403**: „idegen eredetű kérés” | 200 |
 
@@ -551,7 +552,7 @@ sequenceDiagram
 > Állapotot **soha** ne változtass GET-tel — egy `<img src="…">` is elküldi.
 
 <!-- @note -->
-> A kérésben Anne cookie-ja, valamint `Origin: https://idegen.example` és `Sec-Fetch-Site: cross-site` fejléc volt — ezeket a böngésző magától teszi a kéréshez, itt a curl utánozta őket. A védelem nélküli szerver Anne nevében lemondta a jelentkezést. A GET-szabályhoz: ha a lemondás `GET /lemondas?kurzus=webprog` lenne, egy kép is elég volna a támadáshoz, és egy Lax cookie linkre kattintáskor GET-tel is elmegy.
+> A kérésben Alice cookie-ja, valamint `Origin: https://idegen.example` és `Sec-Fetch-Site: cross-site` fejléc volt — ezeket a böngésző magától teszi a kéréshez, itt a curl utánozta őket. A védelem nélküli szerver Alice nevében átírta az e-mail-címet. A GET-szabályhoz: ha a művelet `GET /account/delete` lenne, egy kép is elég volna a támadáshoz, és egy Lax cookie linkre kattintáskor GET-tel is elmegy.
 
 ---
 
@@ -574,7 +575,7 @@ sequenceDiagram
 | **Origin ellenőrzése** | Csak a saját eredetről fogad el írást | Kiegészítő |
 
 <!-- @note -->
-> A CORS nem CSRF-védelem: az olvasást szabályozza, az egyszerű kérés elmegy. A token azért működik, mert a cookie-t a böngésző magától csatolja, a tokent viszont az oldalnak kell beletennie — ahhoz el kellene olvasni a Kurzuspont oldalát, amit a same-origin policy tilt. A `Sec-` előtagú fejlécet weboldal nem hamisíthatja, de csak HTTPS-en küldik. A SameSite webhelyszinten dolgozik, egy aldomaint azonos webhelynek tekint, ezért csak mélységi védelem. Netbank-példa: POST, SameSite=Strict, token, fejlécellenőrzés, és új kedvezményezettnél második tényező (8.6) — így egyetlen hiba nem elég a károkozáshoz.
+> A CORS nem CSRF-védelem: az olvasást szabályozza, az egyszerű kérés elmegy. A token azért működik, mert a cookie-t a böngésző magától csatolja, a tokent viszont az oldalnak kell beletennie — ahhoz el kellene olvasni az alkalmazás oldalát, amit a same-origin policy tilt. A `Sec-` előtagú fejlécet weboldal nem hamisíthatja, de csak HTTPS-en küldik. A SameSite webhelyszinten dolgozik, egy aldomaint azonos webhelynek tekint, ezért csak mélységi védelem. Netbank-példa: POST, SameSite=Strict, token, fejlécellenőrzés, és új kedvezményezettnél második tényező (8.6) — így egyetlen hiba nem elég a károkozáshoz.
 
 ---
 
@@ -589,14 +590,14 @@ sequenceDiagram
 <!-- @set-scale 85% -->
 
 ```js
-const naiv = `SELECT id, cim FROM kurzus WHERE nyilvanos = 1 AND id = '${bemenet}'`;
-const par  = db.prepare('SELECT id, cim FROM kurzus WHERE nyilvanos = 1 AND id = ?');
+const naiv = `SELECT id, nev FROM termek WHERE nyilvanos = 1 AND id = '${bemenet}'`;
+const par  = db.prepare('SELECT id, nev FROM termek WHERE nyilvanos = 1 AND id = ?');
 ```
 
 Bemenet: `x' OR '1'='1`
 
 ```sql
-… WHERE nyilvanos = 1 AND id = 'x' OR '1'='1'  -> mind a 3 kurzus, a belsővel együtt
+… WHERE nyilvanos = 1 AND id = 'x' OR '1'='1'  -> minden termék, a belsők is
 … WHERE nyilvanos = 1 AND id = ?               -> []
 ```
 
@@ -607,7 +608,7 @@ Bemenet: `x' OR '1'='1`
 - `AND` erősebben köt: **(nyilvános ÉS id = x) VAGY 1=1**
 
 <!-- @note -->
-> Az injekció lényege a kód és az adat összekeveredése — ugyanaz a hiba, mint az XSS, csak itt az értelmező az adatbázis. Normál bemenetnél (`webprog`) mindkét változat ugyanazt adja, ezért alattomos: hétköznapi használatnál semmi sem jelzi. Ahogy a matematikában a szorzás erősebben köt az összeadásnál, az SQL-ben az AND erősebben köt az OR-nál. Még célzottabb bemenet: `x' OR nyilvanos = 0 --` — a `--` megjegyzést kezd, és kifejezetten a belső kurzust kéri le. A paraméterezett változat olyan kurzust keres, aminek ez szó szerint az azonosítója. A kipróbálás SQLite-tal, Node.js 24 alatt készült.
+> Az injekció lényege a kód és az adat összekeveredése — ugyanaz a hiba, mint az XSS, csak itt az értelmező az adatbázis. Normál bemenetnél (`42`) mindkét változat ugyanazt adja, ezért alattomos: hétköznapi használatnál semmi sem jelzi. Ahogy a matematikában a szorzás erősebben köt az összeadásnál, az SQL-ben az AND erősebben köt az OR-nál. Még célzottabb bemenet: `x' OR nyilvanos = 0 --` — a `--` megjegyzést kezd, és kifejezetten a nem nyilvános termékeket kéri le. A paraméterezett változat olyan terméket keres, aminek ez szó szerint az azonosítója. A kipróbálás SQLite-tal, Node.js 24 alatt készült.
 
 ---
 
@@ -634,7 +635,7 @@ Bemenet: `x' OR '1'='1`
 
 
 <!-- @note -->
-> A paraméterezésnél a szerkezet és az érték két külön úton jut el: az adatbázis előbb értelmezi a szerkezetet, a `?` helyére csak érték kerülhet, nincs karakter, amivel ki lehetne lépni. Ugyanaz, mint a `printf("%s", szoveg)`. Pythonban: `kurzor.execute("... WHERE id = ?", (bemenet,))`. Az escape-elésnél könnyű egy esetet elfelejteni. A bemenet ellenőrzése hasznos, de nem helyettesíti a paraméterezést. Legkisebb jogosultság: a Kurzuspont adatbázis-fiókja csak olvashatja a kurzus táblát, így egy elrontott lekérdezés is kisebb kárt okoz.
+> A paraméterezésnél a szerkezet és az érték két külön úton jut el: az adatbázis előbb értelmezi a szerkezetet, a `?` helyére csak érték kerülhet, nincs karakter, amivel ki lehetne lépni. Ugyanaz, mint a `printf("%s", szoveg)`. Pythonban: `kurzor.execute("... WHERE id = ?", (bemenet,))`. Az escape-elésnél könnyű egy esetet elfelejteni. A bemenet ellenőrzése hasznos, de nem helyettesíti a paraméterezést. Legkisebb jogosultság: az alkalmazás adatbázis-fiókja csak olvashatja a termék táblát, így egy elrontott lekérdezés is kisebb kárt okoz.
 
 ---
 
@@ -820,19 +821,19 @@ scrypt (N=2^17, r=8, p=1):
 <!-- @color orange -->
 ## 8.7
 
-# Egy hibás jelentkezési API — HTTPS-sel
+# Hibás rendelés-API, HTTPS-sel
 
-<!-- @set-scale 70% -->
+<!-- @set-scale 65% -->
 
 | Hiba | Miért hiba? | Kat. | Javítás |
 | --- | --- | --- | --- |
-| A `hallgatoId` a kérésből jön | Bárki más nevében jelentkezhet | A01 | Azonosító a munkamenetből (7.4) |
+| A `userId` a kérésből jön | Bárki más nevében rendelhet | A01 | Azonosító a munkamenetből (7.4) |
 | Összefűzött SQL | A bemenet utasítássá válhat | A05 | Paraméterezett lekérdezés (8.5) |
 | A megjegyzés HTML-ként jelenik meg | XSS | A05 | Kimeneti kódolás, `textContent` (8.3) |
 | Csak cookie, a szándékot senki sem nézi | CSRF | A01 | Token, SameSite, Fetch metadata (8.4) |
 
 <!-- @note -->
-> A feladat: egy API, amely a böngészőtől kapja a kurzus és a hallgató azonosítóját, csak az érvényes munkamenetet nézi, összefűzve SQL-be illeszti az azonosítókat, a megjegyzést HTML-ként jeleníti meg, és HTTPS-en fut. Érdemes előbb megkérdezni a hallgatókat, hány hibát látnak. A HTTPS a kapcsolatot védi, de négy hiba marad. Módszer: kövesd a kérés útját — ki küldte, módosíthatja-e ezt a hallgatót, adat marad-e a bemenet, a felhasználó szándéka-e, biztonságosan jelenik-e meg a válasz. Minden lépésnél: melyik fél dönt, milyen adatra támaszkodik, és mi történik, ha ezt egy támadó választja meg?
+> A feladat: egy rendelés-API, amely a böngészőtől kapja a termék és a felhasználó azonosítóját, csak az érvényes munkamenetet nézi, összefűzve SQL-be illeszti az azonosítókat, a megjegyzést HTML-ként jeleníti meg, és HTTPS-en fut. Érdemes előbb megkérdezni a hallgatókat, hány hibát látnak. A HTTPS a kapcsolatot védi, de négy hiba marad. Módszer: kövesd a kérés útját — ki küldte, jogosult-e erre a felhasználóra, adat marad-e a bemenet, a felhasználó szándéka-e, biztonságosan jelenik-e meg a válasz. Minden lépésnél: melyik fél dönt, milyen adatra támaszkodik, és mi történik, ha ezt egy támadó választja meg?
 
 ---
 
@@ -868,7 +869,7 @@ scrypt (N=2^17, r=8, p=1):
 - Naplózás · hibakezelés
 
 <!-- @note -->
-> A szerepek összekapcsolódnak, de egyik sem pótolja a másikat: a legerősebb jelszó sem véd, ha a szerver bárkinek kiadja más hallgatók adatait. Az ellenőrzőlista minden pontja egy leckére mutat (8.1–8.6, 7.2, 4.3, 10.2, 10.5). Az áttekintés eredménye nem „biztonságos / nem biztonságos” ítélet, hanem rangsorolt javítási lista, és minden új funkció, csomag vagy architekturális változás újraindítja: a biztonság folyamatos tevékenység.
+> A szerepek összekapcsolódnak, de egyik sem pótolja a másikat: a legerősebb jelszó sem véd, ha a szerver bárkinek kiadja más felhasználók adatait. Az ellenőrzőlista minden pontja egy leckére mutat (8.1–8.6, 7.2, 4.3, 10.2, 10.5). Az áttekintés eredménye nem „biztonságos / nem biztonságos” ítélet, hanem rangsorolt javítási lista, és minden új funkció, csomag vagy architekturális változás újraindítja: a biztonság folyamatos tevékenység.
 
 ---
 
@@ -913,4 +914,4 @@ scrypt (N=2^17, r=8, p=1):
 - **8.7** OWASP Top 10 mint ellenőrzőlista; a biztonság folyamatos
 
 <!-- @note -->
-> Egy gondolat köti össze a fejezetet: a védelmek egymást kiegészítik, nem helyettesítik. Ellenőrző kérdések a záráshoz: Miért nem fogadhatja el a szerver a kérésben megadott hallgatoId-t? Azonos eredetű-e a https://kurzuspont.example és a :8443-as változata? Miért nem véd a CORS egy curl-lel futtatott szkript ellen? Miért nem tudja egy idegen oldal megszerezni a CSRF-tokent? Miért tette láthatóvá a belső kurzust az `x' OR '1'='1` bemenet? Miért nem jó a SHA-256 jelszótárolásra? Melyik OWASP-kategória, ha valaki átírja egy másik hallgató azonosítóját (A01)?
+> Egy gondolat köti össze a fejezetet: a védelmek egymást kiegészítik, nem helyettesítik. Ellenőrző kérdések a záráshoz: Miért nem fogadhatja el a szerver a kérésben megadott userId-t? Azonos eredetű-e a https://app.example és a :8443-as változata? Miért nem véd a CORS egy curl-lel futtatott szkript ellen? Miért nem tudja egy idegen oldal megszerezni a CSRF-tokent? Miért tette láthatóvá a belső termékeket az `x' OR '1'='1` bemenet? Miért nem jó a SHA-256 jelszótárolásra? Melyik OWASP-kategória, ha valaki átírja egy másik felhasználó azonosítóját (A01)?
